@@ -1,0 +1,4 @@
+NetBeans - parece meio ruim, pesada e nao eh free
+Eclipse - leve, free, se tiver um tema escuro da pra usar
+InteliJ - eh russo, o zanini adora essa fita
+VSCode - JavaExtensionPack pra funcionar certinho 
