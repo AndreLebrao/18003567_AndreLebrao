@@ -1,0 +1,8 @@
+1. C:\Program Files\Java\jdk1.8.0_162
+2. C:\Program Files\Java\jdk1.8.0_162\bin
+3. cd path; javac nomeprograma.java
+4. cd path; java nomeprograma 
+5. 
+6. somente quem tem permissao para aquele ambiente
+7. criar path no win como environment variable
+8. uma pasta antes do bin
