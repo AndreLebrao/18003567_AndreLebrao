@@ -19,5 +19,10 @@ public class ex_1 {
         System.out.println("Informe seu idade : ");
         int idade = scanner.nextInt();
         
+        System.out.println("\n\nRA: "+ra);
+        System.out.println("Nome: "+nome);
+        System.out.println("telefone: "+tel);
+        System.out.println("email: "+email);
+        System.out.println("idade: "+idade);
     }
 }
