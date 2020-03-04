@@ -14,8 +14,10 @@ public class ex_1 {
         String nome = scanner.nextLine();
         System.out.println("Informe seu telefone : ");
         int tel = scanner.nextInt();
+        scanner.nextLine();
         System.out.println("Informe seu email : ");
         String email = scanner.nextLine();
+        
         System.out.println("Informe seu idade : ");
         int idade = scanner.nextInt();
         
