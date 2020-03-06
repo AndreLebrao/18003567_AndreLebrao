@@ -19,6 +19,12 @@ public class ex_2 {
         int idade2 = scanner.nextInt();
 
         int dif = Math.abs(idade1-idade2);
-        System.out.println("dif: "+dif);
+        
+        if (idade1>idade2) {
+            System.out.println(nome1+" é mais velho.");
+        } else {
+            System.out.println(nome2+" é mais velho.");
+        }
+        System.out.println("diferenca: "+dif);
     }
 }
