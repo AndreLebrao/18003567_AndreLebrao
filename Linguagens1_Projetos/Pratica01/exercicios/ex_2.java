@@ -26,5 +26,8 @@ public class ex_2 {
             System.out.println(nome2+" é mais velho.");
         }
         System.out.println("diferenca: "+dif);
+            
+        
     }
+    
 }
