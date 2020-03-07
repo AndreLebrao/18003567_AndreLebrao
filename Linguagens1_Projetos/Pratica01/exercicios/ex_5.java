@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class ex_5 {
 
     public static int F(int n) {
-        int Fn = 0;
         if (n < 1) {
             return 0;
         }
