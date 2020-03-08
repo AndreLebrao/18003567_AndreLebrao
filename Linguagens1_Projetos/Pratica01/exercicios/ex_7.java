@@ -14,13 +14,10 @@ public class ex_7 {
     char [] valor_char = valor.toCharArray();
 
     for(char c: valor_char){
-        
+        auxInteger+=Character.getNumericValue(c);
 
     }
-    // for (int i = 0; i < valor.length(); i++) {
-    //     auxInteger += auxInteger.parseInt(valor.;   
-    // }
-    System.out.println(valor.toCharArray());
+    System.out.println("Soma de todos os algarismos: "+auxInteger);
     
     }
 }
