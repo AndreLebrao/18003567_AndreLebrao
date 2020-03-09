@@ -11,6 +11,11 @@ public class ContaTestDrive {
         //Instancia conta - coloca a referencia de um objeto
         c1 = new Conta();
         c1.titular = "Odair";
-        System.out.println(c1.titular);
+        Conta c2 = new Conta();
+        c2.titular = "Goku";
+        System.out.println("Titular: "+c1.titular);
+        System.out.println("Titular c2: "+c2.titular);
+
+
     }
 }

@@ -11,5 +11,13 @@ package Exemplo01;
     public String cpf;
     public double saldo;
     
-    
+    //Métodos da classe
+    void sacar(){}
+    void depositar(){}
+    void visualizarSaldo(){
+            System.out.println("Saldo: "+ this.saldo);
+    }
+    void transferirDinheiro(){}
+
+
 }
