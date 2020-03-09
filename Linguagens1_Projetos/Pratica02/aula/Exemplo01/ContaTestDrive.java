@@ -15,7 +15,10 @@ public class ContaTestDrive {
         c2.titular = "Goku";
         System.out.println("Titular: "+c1.titular);
         System.out.println("Titular c2: "+c2.titular);
-
+        c1.saldo = 2000;
+        c1.visualizarSaldo();
+        //Todo atributo que não tem um valor atribuido tem um default, por nesse caso (double) comeca como 0.0
+        c2.visualizarSaldo();
 
     }
 }

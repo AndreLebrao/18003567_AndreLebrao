@@ -12,7 +12,15 @@ package Exemplo01;
     public double saldo;
     
     //Métodos da classe
-    void sacar(){}
+    boolean sacar(double valor){
+        if(this.saldo<valor){
+            return false;
+        }
+        else{
+            this.saldo-=valor;
+            return true;
+        }
+    }
     void depositar(){}
     void visualizarSaldo(){
             System.out.println("Saldo: "+ this.saldo);
