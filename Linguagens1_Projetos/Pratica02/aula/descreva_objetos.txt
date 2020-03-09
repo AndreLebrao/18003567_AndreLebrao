@@ -1,5 +1,6 @@
 1 - Celular
-    Características
+    Características:
+        marca
         tipoDaTela
         cor
         tamanho
@@ -9,9 +10,21 @@
         microfone
         alto-falante
         câmera
-    O que faz?
+    Comportamentos:
         liga()
         desliga()
         faz ligação()
         toca música()
         surfar na web()
+
+2 - Reunião
+    Características:
+        numPessoas
+        local
+        assunto
+        tempo
+    Comportamentos:
+        discutir()
+        brigar()
+        Definir()
+        Brainstorming()
