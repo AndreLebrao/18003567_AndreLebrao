@@ -7,8 +7,7 @@ package Exemplo01;
  public class Conta {
     //Atributos
     public int numero;
-    public String titular;
-    public String cpf;
+    public Cliente cliente;
     public double saldo;
     
     //Métodos da classe
