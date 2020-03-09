@@ -21,11 +21,20 @@ package Exemplo01;
             return true;
         }
     }
-    void depositar(){}
+    void depositar(double valor){
+        this.saldo+=valor;
+    }
     void visualizarSaldo(){
             System.out.println("Saldo: "+ this.saldo);
     }
-    void transferirDinheiro(){}
+    boolean transferirDinheiro(Conta destino, double valor){
+
+        if(sacar(valor)){
+            destino.depositar(valor);
+            return true;
+        }else
+            return false;
+    }
 
 
 }

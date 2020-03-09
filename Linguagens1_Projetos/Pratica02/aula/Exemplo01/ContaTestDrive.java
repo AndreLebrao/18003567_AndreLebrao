@@ -18,7 +18,14 @@ public class ContaTestDrive {
         c1.saldo = 2000;
         c1.visualizarSaldo();
         //Todo atributo que não tem um valor atribuido tem um default, por nesse caso (double) comeca como 0.0
+        // c2.visualizarSaldo();
+        c1.sacar(300);
+        c1.sacar(3000);
+        c1.visualizarSaldo();
+        c1.transferirDinheiro(c2, 1000);
+        System.out.println("C1: ");
+        c1.visualizarSaldo();
+        System.out.println("C2: ");
         c2.visualizarSaldo();
-
     }
 }
