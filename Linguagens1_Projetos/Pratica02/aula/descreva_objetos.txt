@@ -1,0 +1,17 @@
+1 - Celular
+    Características
+        tipoDaTela
+        cor
+        tamanho
+        peso
+        bateria
+        OS
+        microfone
+        alto-falante
+        câmera
+    O que faz?
+        liga()
+        desliga()
+        faz ligação()
+        toca música()
+        surfar na web()
