@@ -18,9 +18,14 @@ public class Jogada {
     void escolherJogada(String escolha){
         escolha.toLowerCase();
         escolha.replaceAll(" ", "");
-        System.out.println(escolha);
-        
-
+        if (escolha.equals("pedra"))
+            this.pedra = true;   
+        if (escolha.equals("papel"))
+            this.papel = true;   
+        if (escolha.equals("tesoura"))
+            this.tesoura = true;   
+        else
+        System.out.println("Escolha não válida");
     }
     
 }

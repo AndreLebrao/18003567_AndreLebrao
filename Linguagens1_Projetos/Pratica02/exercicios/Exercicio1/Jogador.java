@@ -17,9 +17,4 @@ public class Jogador {
         this.nome = scanner.nextLine();
         scanner.close();
     }
-    void cadastrarJogada(){
-        Scanner scanner = new Scanner(System.in);
-        
-        scanner.close();
-    }
 }
