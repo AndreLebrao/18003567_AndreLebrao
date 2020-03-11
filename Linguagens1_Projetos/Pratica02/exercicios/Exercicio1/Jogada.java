@@ -18,22 +18,27 @@ public class Jogada {
      * 
      */
     void cadastrarJogada(){
+        boolean escolhaValida = false;
 
-        System.out.println("Digite sua jogada: ");
-        String escolha = scanner.nextLine();
-        System.out.println(escolha);
-        // escolha.toLowerCase();
-        // escolha.replaceAll(" ", "");
-        if (escolha.equalsIgnoreCase("pedra"))
-            this.pedra = true;   
-        if (escolha.equalsIgnoreCase("papel"))
-            this.papel = true;   
-        if (escolha.equalsIgnoreCase("tesoura"))
-            this.tesoura = true;   
-            
-        else
+        while (!escolhaValida) {
+            System.out.println("Digite sua jogada: ");
+            String escolha = scanner.nextLine();
+        if (escolha.equalsIgnoreCase("pedra")){
+            this.pedra = true;
+            escolhaValida = true;
+        }
+        if (escolha.equalsIgnoreCase("papel")){
+            this.papel = true;
+            escolhaValida = true;
+        }
+        if (escolha.equalsIgnoreCase("tesoura")){
+            this.tesoura = true;
+            escolhaValida = true;  
+        }
+        if(!escolhaValida)
         System.out.println("Escolha não válida");
         
+        }
     }
 
 }
