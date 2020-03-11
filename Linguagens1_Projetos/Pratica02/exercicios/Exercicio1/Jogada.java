@@ -1,6 +1,5 @@
 package Exercicio1;
 
-import java.util.Scanner;
 
 /**
  * Resultados
@@ -12,16 +11,16 @@ public class Jogada {
     public boolean papel = false;
     public boolean tesoura = false;
 
-    /**
+    /** Troca o estado de somente um dos atributos dependendo do input
      * 
-     * @return "pedra", "papel" ou 
+     * 
      */
-    String escolherJogada(){
-        System.out.println("Escolha sua jogada (pedra/papel/tesoura): ");
-        Scanner scanner = new Scanner(System.in);
+    void escolherJogada(String escolha){
+        escolha.toLowerCase();
+        escolha.replaceAll(" ", "");
+        System.out.println(escolha);
         
 
-        scanner.close();
     }
     
 }
