@@ -1,5 +1,4 @@
 package Exercicio1;
-import Exercicio1.Jogada;
 
 /**
  * Jogador
