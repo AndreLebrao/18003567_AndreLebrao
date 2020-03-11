@@ -1,5 +1,6 @@
 package Exercicio1;
 
+import java.util.Scanner;
 
 /**
  * Resultados
@@ -15,7 +16,10 @@ public class Jogada {
      * 
      * 
      */
-    void escolherJogada(String escolha){
+    void escolherJogada(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Qual sua jogada? ");
+        String escolha = scanner.nextLine();
         escolha.toLowerCase();
         escolha.replaceAll(" ", "");
         if (escolha.equals("pedra"))
@@ -26,6 +30,7 @@ public class Jogada {
             this.tesoura = true;   
         else
         System.out.println("Escolha não válida");
+        scanner.close();
     }
     
 }

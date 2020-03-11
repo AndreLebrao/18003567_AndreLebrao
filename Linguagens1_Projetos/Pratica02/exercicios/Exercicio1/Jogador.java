@@ -7,8 +7,8 @@ import java.util.Scanner;
  */
 public class Jogador {
 
-    public String nome;
-    public Jogada jogada;
+    public String nome = "padrao";
+    public Jogada jogada = new Jogada();
     
 
     void cadastrarJogador(){
