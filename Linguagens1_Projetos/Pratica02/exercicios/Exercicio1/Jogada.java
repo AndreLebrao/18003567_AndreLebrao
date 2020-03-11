@@ -11,27 +11,29 @@ public class Jogada {
     public boolean pedra = false;
     public boolean papel = false;
     public boolean tesoura = false;
+    Scanner scanner = new Scanner(System.in);
 
     /** Troca o estado de somente um dos atributos dependendo do input
      * 
      * 
      */
     void cadastrarJogada(){
-        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Digite sua jogada: ");
         String escolha = scanner.nextLine();
+        System.out.println(escolha);
         // escolha.toLowerCase();
         // escolha.replaceAll(" ", "");
-        if (escolha.equals("pedra"))
+        if (escolha.equalsIgnoreCase("pedra"))
             this.pedra = true;   
-        if (escolha.equals("papel"))
+        if (escolha.equalsIgnoreCase("papel"))
             this.papel = true;   
-        if (escolha.equals("tesoura"))
+        if (escolha.equalsIgnoreCase("tesoura"))
             this.tesoura = true;   
+            
         else
         System.out.println("Escolha não válida");
-        scanner.close();
+        
     }
-    
+
 }
