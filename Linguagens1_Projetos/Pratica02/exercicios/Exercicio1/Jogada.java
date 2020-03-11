@@ -16,12 +16,13 @@ public class Jogada {
      * 
      * 
      */
-    void escolherJogada(){
+    void cadastrarJogada(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Qual sua jogada? ");
+
+        System.out.println("Digite sua jogada: ");
         String escolha = scanner.nextLine();
-        escolha.toLowerCase();
-        escolha.replaceAll(" ", "");
+        // escolha.toLowerCase();
+        // escolha.replaceAll(" ", "");
         if (escolha.equals("pedra"))
             this.pedra = true;   
         if (escolha.equals("papel"))
