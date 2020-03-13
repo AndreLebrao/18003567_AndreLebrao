@@ -12,3 +12,5 @@ animal(raposa).
 animal(cervo).
 planta(grama).
 %com os fatos declarados podemos fazer perguntas
+presa(X) :-
+    come(_,X),animal(X).
