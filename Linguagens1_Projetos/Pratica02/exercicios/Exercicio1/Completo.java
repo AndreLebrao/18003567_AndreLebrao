@@ -9,7 +9,5 @@ public class Completo {
         
         Setup setup = new Setup();
         setup.iniciar();
-
-
     }
 }

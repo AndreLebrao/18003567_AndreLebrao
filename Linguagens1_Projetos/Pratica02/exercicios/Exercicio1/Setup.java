@@ -12,11 +12,11 @@ public class Setup {
     public int escolha;
     
     void iniciar(){
-        System.out.println("Escolha qual jogo: \nPedra-Papel-Tesoura (1)\nRock-Paper-Scissor-Lizard-Spoke (2)");
-        escolha = scanner.nextInt();
         boolean escolhaValida = false;
 
         while (!escolhaValida) {
+            System.out.println("Escolha qual jogo: \nPedra-Papel-Tesoura (1)\nRock-Paper-Scissor-Lizard-Spoke (2)");
+            escolha = scanner.nextInt();
             switch (escolha) {
                 case 1:
                     escolhaValida = true;
@@ -25,14 +25,21 @@ public class Setup {
                     jogo.player1.jogada.cadastrarJogada();
                     jogo.player2.cadastrarJogador();
                     jogo.player2.jogada.cadastrarJogada();
-
-                    
+                    jogo.Jokenpo();
                     break;
             
                 case 2:
-                escolhaValida = false;
+                    escolhaValida = true;
                     JogoLS jogoLS = new JogoLS();
+                    jogoLS.player1.cadastrarJogador();
+                    jogoLS.player1.jogada.cadastrarJogada();
+                    jogoLS.player2.cadastrarJogador();
+                    jogoLS.player2.jogada.cadastrarJogada();
+                    jogoLS.JokenpoLS();
                     break;
+            }
+            if(!escolhaValida){
+                System.out.println("Escolha não válida");
             }
         }   
     

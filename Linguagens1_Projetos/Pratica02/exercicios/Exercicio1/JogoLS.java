@@ -88,6 +88,7 @@ public class JogoLS {
                         System.out.println(this.player1.nome+" ganhou!");
                         break;
                 }
+                break;
             case 5:
                     switch(this.player2.jogada.codigoJogada){
                     case 1:
