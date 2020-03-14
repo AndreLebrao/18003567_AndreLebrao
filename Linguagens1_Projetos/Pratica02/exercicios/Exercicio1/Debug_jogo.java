@@ -13,7 +13,7 @@ public class Debug_jogo {
         jogo.player1.cadastrarJogador();
         jogo.player2.cadastrarJogador();
         jogo.player1.jogada.cadastrarJogada();
-        
+        jogo.comecarJokenpo();
         
         scanner.close();
     }

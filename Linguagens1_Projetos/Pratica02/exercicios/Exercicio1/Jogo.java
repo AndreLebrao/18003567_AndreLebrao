@@ -11,10 +11,27 @@ public class Jogo {
     void comecarJokenpo(){
 
         switch (this.player1.jogada.codigoJogada) {
-            case 0:
-                System.out.println("0");
+            case 1:
+                switch(this.player2.jogada.codigoJogada){
+                    case 1:
+                        System.out.println("Empate!");
+                        break;
+                    case 2:
+                        System.out.println(this.player2.nome+" ganhou!");
+                        break;
+                    case 3:
+                        System.out.println(this.player1.nome+" ganhou!");
+                }
                 break;
-        
+            
+            case 2:
+                
+                break;
+
+            case 3:
+                
+                break;
+
             default:
                 break;
         }
