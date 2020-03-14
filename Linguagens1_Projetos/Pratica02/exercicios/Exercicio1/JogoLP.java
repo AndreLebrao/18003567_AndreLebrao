@@ -1,9 +1,9 @@
 package Exercicio1;
 
 /**
- * Jogo
+ * JogoLP
  */
-public class Jogo {
+public class JogoLP {
 
     public Jogador player1 = new Jogador();
     public Jogador player2 = new Jogador();
