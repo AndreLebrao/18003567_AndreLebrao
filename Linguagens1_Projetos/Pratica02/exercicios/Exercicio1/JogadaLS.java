@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * JogadasLP
  */
-public class JogadaLP {
+public class JogadaLS {
 
     public boolean pedra = false;
     public boolean papel = false;
@@ -41,12 +41,12 @@ public class JogadaLP {
             escolhaValida = true;  
         }
         if (escolha.equalsIgnoreCase("lizzard")){
-            this.tesoura = true;
+            this.lizzard = true;
             this.codigoJogada = 4;
             escolhaValida = true;  
         }
         if (escolha.equalsIgnoreCase("spoke")){
-            this.tesoura = true;
+            this.spoke =  true;
             this.codigoJogada = 5;
             escolhaValida = true;  
         }

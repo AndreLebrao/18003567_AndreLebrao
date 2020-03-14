@@ -5,8 +5,8 @@ package Exercicio1;
  */
 public class JogoLS {
 
-    public Jogador player1 = new Jogador();
-    public Jogador player2 = new Jogador();
+    public JogadorLS player1 = new JogadorLS();
+    public JogadorLS player2 = new JogadorLS();
 
     void JokenpoLS(){
 
