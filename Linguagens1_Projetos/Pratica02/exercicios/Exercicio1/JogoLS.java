@@ -54,21 +54,22 @@ public class JogoLS {
             case 3:
                     switch(this.player2.jogada.codigoJogada){
                     case 1:
-                        System.out.println(this.player2.nome+" ganhou!");
+                        // System.out.println(this.player2.nome+" ganhou!");
                         break;
                     case 2:
-                        System.out.println(this.player1.nome+" ganhou!");
+                        // System.out.println(this.player1.nome+" ganhou!");
                         break;
                     case 3:
-                        System.out.println("Empate!");
+                        // System.out.println("Empate!");
                         break;
                     case 4:
-                        System.out.println(this.player1.nome+" ganhou!");
+                        // System.out.println(this.player1.nome+" ganhou!");
                         break;
                     case 5:
-                        System.out.println(this.player2.nome+" ganhou!");
+                        // System.out.println(this.player2.nome+" ganhou!");
                         break;
                 }
+                break;
             case 4:
                     switch(this.player2.jogada.codigoJogada){
                     case 1:
