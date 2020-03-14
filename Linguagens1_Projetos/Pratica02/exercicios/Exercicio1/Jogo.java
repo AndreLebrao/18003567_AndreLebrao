@@ -8,7 +8,7 @@ public class Jogo {
     public Jogador player1 = new Jogador();
     public Jogador player2 = new Jogador();
 
-    void comecarJokenpo(){
+    void Jokenpo(){
 
         switch (this.player1.jogada.codigoJogada) {
             case 1:

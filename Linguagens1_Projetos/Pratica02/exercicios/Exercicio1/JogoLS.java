@@ -3,12 +3,12 @@ package Exercicio1;
 /**
  * JogoLP
  */
-public class JogoLP {
+public class JogoLS {
 
     public Jogador player1 = new Jogador();
     public Jogador player2 = new Jogador();
 
-    void comecarJokenpo(){
+    void JokenpoLS(){
 
         switch (this.player1.jogada.codigoJogada) {
             case 1:

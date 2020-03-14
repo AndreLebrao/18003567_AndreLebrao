@@ -15,37 +15,37 @@ public class Debug_jogo {
 
         jogo.player1.jogada.codigoJogada = 1; //pedra
         jogo.player2.jogada.codigoJogada = 1; //pedra
-        jogo.comecarJokenpo();
+        jogo.Jokenpo();
         jogo.player1.jogada.codigoJogada = 1; //pedra
         jogo.player2.jogada.codigoJogada = 2; //papel
-        jogo.comecarJokenpo();
+        jogo.Jokenpo();
         jogo.player1.jogada.codigoJogada = 1; //pedra
         jogo.player2.jogada.codigoJogada = 3; //tesoura
-        jogo.comecarJokenpo();
+        jogo.Jokenpo();
 
         System.out.println();
 
         jogo.player1.jogada.codigoJogada = 2; //papel
         jogo.player2.jogada.codigoJogada = 1; //pedra
-        jogo.comecarJokenpo();
+        jogo.Jokenpo();
         jogo.player1.jogada.codigoJogada = 2; //papel
         jogo.player2.jogada.codigoJogada = 2; //papel
-        jogo.comecarJokenpo();
+        jogo.Jokenpo();
         jogo.player1.jogada.codigoJogada = 2; //papel
         jogo.player2.jogada.codigoJogada = 3; //tesoura
-        jogo.comecarJokenpo();
+        jogo.Jokenpo();
 
         System.out.println();
         
         jogo.player1.jogada.codigoJogada = 3; //tesoura
         jogo.player2.jogada.codigoJogada = 1; //pedra
-        jogo.comecarJokenpo();
+        jogo.Jokenpo();
         jogo.player1.jogada.codigoJogada = 3; //tesoura
         jogo.player2.jogada.codigoJogada = 2; //papel
-        jogo.comecarJokenpo();
+        jogo.Jokenpo();
         jogo.player1.jogada.codigoJogada = 3; //tesoura
         jogo.player2.jogada.codigoJogada = 3; //tesoura
-        jogo.comecarJokenpo();
+        jogo.Jokenpo();
         
         scanner.close();
     }
