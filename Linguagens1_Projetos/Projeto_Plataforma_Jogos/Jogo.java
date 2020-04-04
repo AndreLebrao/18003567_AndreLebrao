@@ -1,19 +1,16 @@
-
-/**
- * Jogo
- */
 public class Jogo {
-
-    String nome;
-    String genero;
-    String descricao;
-    boolean online;
-    boolean multiplayer;
+    private String nome;
+    private String genero;
+    private String descricao;
+    private boolean online;
+    private boolean multiplayer;
 
     public Jogo(String nome, String genero, String descricao) {
         this.nome = nome;
         this.genero = genero;
         this.descricao = descricao;
+        online = false;
+        multiplayer = false;
     }
 
     public String getNome() {
@@ -27,6 +24,7 @@ public class Jogo {
     public String getDescricao() {
         return descricao;
     }
+
 
     public boolean isOnline() {
         return online;
@@ -45,7 +43,6 @@ public class Jogo {
     }
 
     public String getInfo(){
-        return String.format("{Nome: %s\nGenero: %s\nDescricao: %s}",getNome(),getGenero(),getDescricao());
+        return String.format("{nome:%s, genero:%s, descricao:%s}", this.nome, this.genero, this.descricao);
     }
-
 }
