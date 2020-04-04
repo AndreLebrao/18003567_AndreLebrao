@@ -1,5 +1,4 @@
 public class RH {
-    
     public static void rodarRh(){
         Gerente g1, g2;
         Vendedor v1, v2;
