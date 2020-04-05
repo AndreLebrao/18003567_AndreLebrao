@@ -1,37 +1,17 @@
 /**
  * Main
  */
-import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException, InterruptedException {
-
-        Scanner scanner = new Scanner(System.in);
-        boolean ui = true;
-
-        while (ui) {
-            
-            System.out.println("Escolha uma opção:\n1 - Logar\n2 - Registrar\n3 - Sair\n");
-            int escolha = scanner.nextInt();
-            scanner.nextLine();
-            switch (escolha) {
-                case 1:
-                    System.out.println("1");
-                    break;
-                case 2:
-                    System.out.println("2");
-                    break;
-                case 3:
-                    ui = false;
-                    break;
-
-            }
-        CLS.cls();
-        }
+    public static void main(String[] args){
         
-
+        Scanner scanner = new Scanner(System.in);
+        Plataforma.startup();
+        
+    scanner.close();
     }
 }
 

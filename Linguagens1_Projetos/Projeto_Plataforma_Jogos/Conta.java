@@ -40,4 +40,10 @@ public class Conta {
         resposta += "]}";
         return resposta;
     }
+    public boolean validarUser(String tryEmail, String trySenha){
+        if(user.validarEmail(tryEmail) && user.validarSenha(trySenha))
+            return true;
+        else 
+            return false;
+    }
 }
