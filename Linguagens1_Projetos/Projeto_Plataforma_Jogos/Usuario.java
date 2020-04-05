@@ -14,6 +14,10 @@ public class Usuario {
         return senha.equals(password);
     }
 
+    public boolean validarEmail(String email){
+        return email.equals(email);
+    }
+
     public String getNickname(){
         return nickname;
     }
