@@ -6,9 +6,11 @@ public class Conta {
     private int idConta;
     private double saldo;
     private Usuario user;
+    private static int totalDeContas;
 
-    public Conta(int idConta, double saldo, Usuario user) {
-        this.idConta = idConta;
+    public Conta(Usuario user,double saldo) {
+        Conta.totalDeContas+=1;
+        this.idConta = Conta.totalDeContas;
         this.saldo = saldo;
         this.user = user;
     }
@@ -16,7 +18,7 @@ public class Conta {
     public void depositar(double valor){
         this.saldo+=valor;
     }
-    public boolean retirar(double valor){
+    public boolean sacar(double valor){
         if (this.saldo>=valor) {
             this.saldo-=valor;
             return true;
@@ -29,5 +31,16 @@ public class Conta {
     public double getSaldo() {
         return saldo;
     }
-
+    public int getIdConta(){
+        return idConta;
+    }
+    public static int getTotalDeContas(){
+        return Conta.totalDeContas;
+    }
+    public String getInfo(){
+        return String.format("Nome Usuário: %s - Saldo: %.2f",this.user.getNome(),this.getSaldo());
+    }
+    public String getUserNome(){
+        return user.getNome();
+    }
 }
