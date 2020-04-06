@@ -10,6 +10,7 @@ public class Main {
         
         Scanner scanner = new Scanner(System.in);
         Plataforma.startup();
+        Plataforma.paginaPrincipal();
         
     scanner.close();
     }

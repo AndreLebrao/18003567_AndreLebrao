@@ -9,13 +9,14 @@ public class Plataforma {
     private static ArrayList<Conta> contas = new ArrayList<>();
     private static boolean startup = true;
     private static boolean paginaPrincipal = false;
+    static Scanner scanner = new Scanner(System.in);
 
     public static void addConta(Conta conta){
         contas.add(conta);
     }
 
     public static void startup() {
-        Scanner scanner = new Scanner(System.in);
+
         while (startup) {
             
             System.out.println("Escolha uma opção:\n1 - Logar\n2 - Registrar\n3 - Sair\n");
@@ -55,12 +56,39 @@ public class Plataforma {
                 case 3:
                     startup = false;
                     break;
-
+                default:
+                    break;
             }
             //cls vem aqui
         }
-        scanner.close();
     }
 
 
+    public static void paginaPrincipal() {
+        while(paginaPrincipal) {
+            System.out.println("Escolha uma opção:\n1 - Biblioteca\n2 - Comprar um jogo\n3 - Perfil\n4 - Sair");
+            int escolha = scanner.nextInt();
+            scanner.nextLine();
+            switch (escolha) {
+                case 1:
+                    ;
+                    break;
+
+                case 2:
+                    System.out.println("2");
+                    break;
+                case 3:
+                    
+                    break;
+                case 4:
+                    paginaPrincipal = false;
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
+    }
+    
 }
