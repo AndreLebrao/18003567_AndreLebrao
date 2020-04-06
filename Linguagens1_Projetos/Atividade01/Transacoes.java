@@ -17,6 +17,7 @@ public class Transacoes {
 
         int idRecebedor = Integer.parseInt(dados[0]);
         String nome = dados[1];
+        //peguei daqui o parseDouble https://www.guj.com.br/t/converter-string-para-double/33453/3
         double valor = Double.parseDouble(dados[2].replace(",","."));
         int idTransacao = Integer.parseInt(dados[3]);
 
