@@ -23,7 +23,7 @@ void printArray(int array[], int n)
 }
 int main(int argc, char const *argv[])
 {
-    int array[10] = {6,3,0,8,1,2,4,9,5,10,7};
+    int array[10] = {6,3,0,8,1,2,4,9,5,10};
     printArray(array,10);
     printf("\n");
     insertionSort(array,10);
