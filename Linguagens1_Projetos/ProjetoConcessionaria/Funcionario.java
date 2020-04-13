@@ -3,8 +3,8 @@
  * Funcionario
  */
 public class Funcionario {
-    private double salarioBase;
-    private final double comissao;
+    protected double salarioBase;
+    protected double comissao;
 
     //Construtor
     public Funcionario(double salarioBase){
@@ -16,11 +16,13 @@ public class Funcionario {
         return salarioBase;
     }
 
-    public double getComissao() {
-        return comissao;
-    }
 
     public double getSalarioFinal(double totalVendasMes){
         return salarioBase + comissao * totalVendasMes;
+    }
+
+    public Funcionario(double salarioBase, double comissao) {
+        this.salarioBase = salarioBase;
+        this.comissao = comissao;
     }
 }
