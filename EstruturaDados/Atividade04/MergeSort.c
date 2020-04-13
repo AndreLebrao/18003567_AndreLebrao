@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
     }
     printf("\n");
     //sort vem aqui
-    merge(entrada,1,3,8);
+    mergeSort(entrada,0,7);
 
     printf("\n");
     for (int i = 0; i < len; i++){
@@ -31,47 +31,64 @@ void merge(int A[],int p, int q, int r){
     int i,j,k;
     int n1 = q-p+1;
     int n2 = r-q;
-    int L[n1+1], R[n2+1];
+    
+    // tentei fazer segundo o pseudo-código no Cormen,
+    // usando infinity:
+    
+    // int L[n1+1], R[n2+1];
+    // for (int i = 0; i < n1; i++){
+    //     L[i] = A[p+i-1];
+    // }
+    // for (int j = 0; j < n2; j++){
+    //     R[j] = A[q+j];
+    // }
+    // L[n1+1] = inf;
+    // R[n2+1] = inf;
 
-    for (int i = 0; i < n1; i++){
-        L[i] = A[p+i-1];
-    }
-    for (int j = 0; j < n2; j++){
-        R[j] = A[q+j];
-    }
-    L[n1+1] = inf;
-    R[n2+1] = inf;
+    int L[n1], R[n2]; 
+  
+    for (i = 0; i < n1; i++) 
+        L[i] = A[p + i]; 
+    for (j = 0; j < n2; j++) 
+        R[j] = A[q + 1+ j]; 
+
+
     i=0;
     j=0;
-   for(k=p; k <= r; k++){
-       if (L[i]<R[j]){
-           A[k] = L[i];
-           i++;
-       }
-       else{
-           A[k] = R[j];
-           j++;
-       }
-       
-   }
+    k = p;
+    while (i < n1 && j < n2){ 
+
+        if (L[i] <= R[j]){ 
+            A[k] = L[i]; 
+            i++; 
+        } 
+        else{ 
+            A[k] = R[j]; 
+            j++; 
+        } 
+        k++; 
+    } 
+    while (i < n1){ 
+        A[k] = L[i]; 
+        i++; 
+        k++; 
+    } 
+    while (j < n2){ 
+        A[k] = R[j]; 
+        j++; 
+        k++; 
+    }
+   
 }
 void mergeSort(int A[],int p, int r){
     if(p<r){
-        
+        int q = (p+r)/2;
+        mergeSort(A,p,q);
+        mergeSort(A,q+1,r);
+        merge(A,p,q,r);
     }
 }
 
-
-    //print das matrizes
-    // for (i = 0; i < n1+1; i++)
-    // {
-    //     printf("%d  ",(int) L[i]);
-    // }
-    // for (j = 0; j < n2+1; j++)
-    // {
-    //     printf("%d  ",(int) R[j]);
-    // }
-    
  
 
     
