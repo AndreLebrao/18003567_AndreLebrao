@@ -1,6 +1,11 @@
 import java.util.ArrayList;
 import java.util.Random;
-
+/**
+ * Grupo Kali
+ * André Lebrão Aigner Ribeiro - 18.00356-7
+ * João Guilherme Martins Jatobá - 18.01790-8
+ * João Pedro de Padua Santoro Azevedo - 18.02227-4
+ */
 /**
  * Client
  */
