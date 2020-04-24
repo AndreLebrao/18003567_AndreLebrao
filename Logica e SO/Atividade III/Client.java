@@ -8,20 +8,20 @@ public class Client {
 
     private String name;
     private Account conta;
-    private static ArrayList<Client> Clients = new ArrayList<>();
+    public static ArrayList<Client> arrayClients = new ArrayList<>();
 
-    public String execute() {
+    public void execute(double valor) {
         int aleatorio = getRandomNumberInRange(0, 1);
         if (aleatorio == 1) {
-            return "deposit";
+            this.conta.deposit(valor);
+            System.out.println("deposit");
         } else {
-            return "withdraw";
+            this.conta.withdraw(valor);
+            System.out.println("withdraw");
         }
     }
 
-    public void getCliente(){
-        System.out.printf("\nNome: %s\tBalance: %.2f\n",this.name,this.conta.getBalance());
-    }
+
     //Essa função foi fornecida como material para uma Atividade de Linguagens de Programação 1
     public static int getRandomNumberInRange(int min, int max) {
         Random r = new Random();
@@ -30,7 +30,18 @@ public class Client {
     public Client(String name, Account conta) {
         this.name = name;
         this.conta = conta;
-        Clients.add(this);
+        arrayClients.add(this);
+    }
+    public void getCliente(){
+        System.out.printf("\nNome: %s\tBalance: %.2f\n",this.name,this.conta.getBalance());
     }
 
+    public static void getClients(){
+        for (Client each : arrayClients) {
+            each.getCliente();
+        }
+    }
+    public String getName(){
+        return name;
+    }
 }

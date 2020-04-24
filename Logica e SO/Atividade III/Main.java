@@ -16,25 +16,39 @@ public class Main{
         Client c2 = new Client("Murilo", a2);
 
         boolean flag = true;
+        
+        Client.getClients();
 
         while (flag) {
-            System.out.println("Escolha a operação:\n1 - random\n2 - deposit\n3 - withdraw\n0 - exit");
+            System.out.println("Escolha a operação:\n1 - todas aleatórias\n2 - uma aleatória\n0 - exit");
             int resp = scanner.nextInt();
             scanner.nextLine();
+
             int valor = valores[Client.getRandomNumberInRange(0, 3)];
+            
             switch (resp) {
                 case 1:
-                    System.out.println("Cliente 1: ");
-                    System.out.println(c1.execute());
-
+                for (Client each : Client.arrayClients) {
+                    each.execute(valor);
+                    valor = valores[Client.getRandomNumberInRange(0, 3)];
+                }
                     break;
                 case 2:
-                    System.out.println("Qual o valor que deseja depositar?");
+                    System.out.println("Qual conta deseja depositar?(digite o nome): ");
+                    String nome = scanner.nextLine();
+                    for (Client each : Client.arrayClients) {
+                        if ((each.getName()).equalsIgnoreCase(nome)) {
+                            each.execute(valor);
+                            break;
+                        }else{
+                            System.out.println("Nome não encontrado...");
+                        }
+                    }
                     break;
-            
                 default:
                     break;
             }
+            Client.getClients();
         }
     }
 }
