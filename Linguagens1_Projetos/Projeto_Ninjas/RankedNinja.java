@@ -1,14 +1,16 @@
 public class RankedNinja extends Ninja {
-    protected String mission;
+    protected Mission mission;
+    protected String rank;
 
     //Construtor do RankedNinja
-    public RankedNinja(String name, String family, String mission){
+    public RankedNinja(String name, String family, Mission mission, String rank){
         super(name, family);
         this.mission = mission;
+        this.rank = rank;
     }
 
     public void goToMission(){
-        System.out.println("Indo para missao:" + mission);
+        System.out.println("Indo para missao:" + mission.getObjetivo());
     }
     @Override
     public void train(){
