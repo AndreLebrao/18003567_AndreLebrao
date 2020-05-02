@@ -3,10 +3,9 @@ public class RankedNinja extends Ninja {
     protected String rank;
 
     //Construtor do RankedNinja
-    public RankedNinja(String name, String family, Mission mission, String rank){
+    public RankedNinja(String name, String family, Mission mission){
         super(name, family);
         this.mission = mission;
-        this.rank = rank;
     }
 
     public void goToMission(){
