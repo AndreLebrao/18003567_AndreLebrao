@@ -8,9 +8,13 @@ public class RankedNinja extends Ninja {
         this.mission = mission;
     }
 
-    public void goToMission(){
-        System.out.println("Indo para missao:" + mission.getObjetivo());
+    public boolean goToMission(Mission mission){
+        if (this.rank.contains(mission.getRankMission()))
+            return true;
+        else
+        return false;
     }
+
     @Override
     public void train(){
         System.out.println("No pain no gain");
