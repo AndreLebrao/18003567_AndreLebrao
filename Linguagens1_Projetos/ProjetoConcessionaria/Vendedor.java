@@ -4,7 +4,7 @@ public class Vendedor extends Funcionario{
 
     //Construtor
     public Vendedor(double salarioBase, Gerente gerente){
-        super(salarioBase);
+        super(salarioBase,0.02);
         this.gerente = gerente;
     }
 
