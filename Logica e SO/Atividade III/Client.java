@@ -12,16 +12,16 @@ import java.util.Random;
 public class Client {
 
     private String name;
-    private Account conta;
+    private static Account conta;
     public static ArrayList<Client> arrayClients = new ArrayList<>();
 
     public void execute(double valor) {
         int aleatorio = getRandomNumberInRange(0, 1);
         if (aleatorio == 1) {
-            this.conta.deposit(valor);
+            Client.conta.deposit(valor);
             System.out.println("deposit");
         } else {
-            this.conta.withdraw(valor);
+            Client.conta.withdraw(valor);
             System.out.println("withdraw");
         }
     }
@@ -32,13 +32,12 @@ public class Client {
         Random r = new Random();
         return r.nextInt((max - min) + 1) + min;
     }
-    public Client(String name, Account conta) {
+    public Client(String name) {
         this.name = name;
-        this.conta = conta;
         arrayClients.add(this);
     }
     public void getCliente(){
-        System.out.printf("\nNome: %s\tBalance: %.2f\n",this.name,this.conta.getBalance());
+        System.out.printf("\nNome: %s\tBalance: %.2f\n",this.name, Client.conta.getBalance());
     }
 
     public static void getClients(){
@@ -48,5 +47,8 @@ public class Client {
     }
     public String getName(){
         return name;
+    }
+    public static void setAccount(Account account){
+        Client.conta = account;
     }
 }
