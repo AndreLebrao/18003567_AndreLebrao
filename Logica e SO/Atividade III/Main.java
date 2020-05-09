@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 /**
  * Grupo Kali
  * André Lebrão Aigner Ribeiro - 18.00356-7
@@ -11,22 +11,15 @@ import java.util.Scanner;
 public class Main{
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        int valores[] = {10,20,50,100};
-
-        Account a1 = new Account(200);
-        Client c1 = new Client("Furlan");
-        Client c2 = new Client("Murilo");
-        Client c3 = new Client("Vanderlei");
-        Client c4 = new Client("Aparecido");
-        Client.setAccount(a1);
-
-        boolean flag = true;
-        
-        Client.getClients();
-        int valor = valores[Client.getRandomNumberInRange(0, 3)];
-        valor = valores[Client.getRandomNumberInRange(0, 3)];
-
+        Account account = new Account();
+        Client c1 = new Client("Furlan",account);
+        Client c2 = new Client("Murilo",account);
+        Client c3 = new Client("Vanderlei",account);
+        Client c4 = new Client("Aparecido",account);
+        c1.start();
+        c2.start();
+        c3.start();
+        c4.start();
     }
 }
