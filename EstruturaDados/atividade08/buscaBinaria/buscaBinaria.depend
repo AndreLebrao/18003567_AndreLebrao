@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1589550762 source:c:\users\andle\desktop\18003567_andrelebrao\estruturadados\atividade08\buscabinaria\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
