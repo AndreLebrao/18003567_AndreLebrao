@@ -23,7 +23,7 @@ import br.maua.models.ScriptGuy;
  
 
 public abstract class Menu implements MemberApresentacao{
-
+    
     private static ArrayList<Member> memberList = new ArrayList<>();
     private static SystemTime sTime = SystemTime.REGULAR;
     
@@ -42,6 +42,7 @@ public abstract class Menu implements MemberApresentacao{
         }
     }
 
+    //TODO: encapsular os metodos cadastrar e remover members, mas precisa lidar com o scanner abrindo e fechando
     public static void run(){
         boolean flag = true;
         int option;
@@ -57,11 +58,16 @@ public abstract class Menu implements MemberApresentacao{
                     flag = false;
                     break;
                 case 1:
+                    // try {
+                            //TODO: colcoar da linha 53 a 75 aqui dentro
+                    // } catch (Exception e) {
+                    //     //TODO: handle exception
+                    // }
                     System.out.println("Nome: ");
                     String nome = scanner.nextLine();
                     System.out.println("Email: ");
                     String email = scanner.nextLine();
-                    System.out.println("Escolha o cargo:\n1 - Mobile Member\n2 - Heavy Lifter\n3 - Big Brother\n4 - Script Guy\n");
+                    System.out.println("\nEscolha o cargo:\n1 - Mobile Member\n2 - Heavy Lifter\n3 - Big Brother\n4 - Script Guy\n");
                     int cargo = scanner.nextInt();
                     scanner.nextLine();
                     switch (cargo) {
@@ -83,7 +89,10 @@ public abstract class Menu implements MemberApresentacao{
                     break;
                 
                 case 2:
-                    System.out.println("remover");
+                    System.out.println("Digite o ID do membro a ser retirado: ");
+                    int index = scanner.nextInt();
+                    scanner.nextLine();
+                    memberList.remove(index);
                     break;
                 case 3:
                     for (Member member : memberList) {
@@ -92,8 +101,11 @@ public abstract class Menu implements MemberApresentacao{
                     break;
 
                 case 4:
+                    int ID = 0;
                     for (Member member : memberList) {
+                        System.out.printf("ID: "+ID);
                         member.apresentar();
+                        ID++;
                     }
                     break;
                 
