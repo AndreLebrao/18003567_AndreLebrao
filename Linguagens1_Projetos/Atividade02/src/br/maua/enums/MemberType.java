@@ -1,6 +1,6 @@
 package br.maua.enums;
 
 public enum MemberType {
-    
-    MOBILE_MEMBER,HEAVY_LIFTER,SCRIPT_GUYS,BIG_BROTHERS;
+
+    MOBILE_MEMBER,HEAVY_LIFTER,SCRIPT_GUY,BIG_BROTHER;
 }
