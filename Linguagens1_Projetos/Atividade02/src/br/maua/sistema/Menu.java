@@ -31,7 +31,29 @@ public abstract class Menu implements MemberApresentacao{
         }
     }
 
-    //TODO: encapsular os metodos cadastrar e remover members, mas precisa lidar com o scanner abrindo e fechando
+    public static void cadastrarMembro(String nome, String email, int cargo){
+        // try {
+        //TODO: colcoar todo método aqui dentro
+        // } catch (Exception e) {
+        //     //TODO: handle exception, tentamos achar algum erro mas não entendemos qual erro ele ta procurando.
+        // }
+        switch (cargo) {
+            case 1:
+                memberList.add(new MobileMember(nome, email));
+                break;
+            case 2:
+                memberList.add(new HeavyLifter(nome, email));
+                break;
+            case 3:
+                memberList.add(new BigBrother(nome, email));
+                break;
+            case 4:
+                memberList.add(new ScriptGuy(nome, email));
+                break;
+            default:
+                break;
+        }
+    }
     public static void run(){
         boolean flag = true;
         int option;
@@ -47,11 +69,6 @@ public abstract class Menu implements MemberApresentacao{
                     flag = false;
                     break;
                 case 1:
-                    // try {
-                            //TODO: colcoar da linha 53 a 75 aqui dentro
-                    // } catch (Exception e) {
-                    //     //TODO: handle exception
-                    // }
                     System.out.println("Nome: ");
                     String nome = scanner.nextLine();
                     System.out.println("Email: ");
@@ -59,22 +76,7 @@ public abstract class Menu implements MemberApresentacao{
                     System.out.println("\nEscolha o cargo:\n1 - Mobile Member\n2 - Heavy Lifter\n3 - Big Brother\n4 - Script Guy\n");
                     int cargo = scanner.nextInt();
                     scanner.nextLine();
-                    switch (cargo) {
-                        case 1:
-                            memberList.add(new MobileMember(nome, email));
-                            break;
-                        case 2:
-                            memberList.add(new HeavyLifter(nome, email));
-                            break;
-                        case 3:
-                            memberList.add(new BigBrother(nome, email));
-                            break;
-                        case 4:
-                            memberList.add(new ScriptGuy(nome, email));
-                            break;
-                        default:
-                            break;
-                    }
+                    cadastrarMembro(nome, email, cargo);
                     break;
                 
                 case 2:
@@ -104,7 +106,8 @@ public abstract class Menu implements MemberApresentacao{
                 default:
                     break;
             }
+            scanner.close();
         }
-
+        
     }
 }
