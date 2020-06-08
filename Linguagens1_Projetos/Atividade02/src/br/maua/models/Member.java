@@ -30,16 +30,29 @@ public abstract class Member implements MemberApresentacao{
     }
 
     @Override
-    public void apresentar(ArrayList<Member> list) {
+    public void apresentar() {
         // TODO Auto-generated method stub
-        
+        System.out.println("Nome: "+ this.getNomeUsuario()
+        +"\nE-mail: " + this.getEmail()
+        +"\nCargo: "+ this.getCargo());
+    }
+    
+
+    @Override
+    public String toString() {
+        return "Member [email=" + email + ", nomeUsuario=" + nomeUsuario + "]";
     }
 
     public String getNomeUsuario() {
         return nomeUsuario;
     }
-    @Override
-    public String toString() {
-        return "Member [email=" + email + ", nomeUsuario=" + nomeUsuario + "]";
+    public String getEmail() {
+        return email;
     }
+
+    public MemberType getCargo() {
+        return cargo;
+    }
+    
+
 }

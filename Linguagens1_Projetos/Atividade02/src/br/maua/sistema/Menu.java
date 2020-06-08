@@ -7,7 +7,7 @@ import br.maua.interfaces.MemberApresentacao;
 import br.maua.models.BigBrother;
 import br.maua.models.HeavyLifter;
 import br.maua.models.Member;
-import br.maua.models.MobileMembers;
+import br.maua.models.MobileMember;
 import br.maua.models.ScriptGuy;
 
 public abstract class Menu implements MemberApresentacao{
@@ -47,7 +47,7 @@ public abstract class Menu implements MemberApresentacao{
                     scanner.nextLine();
                     switch (cargo) {
                         case 1:
-                            memberList.add(new MobileMembers(nome, email));
+                            memberList.add(new MobileMember(nome, email));
                             break;
                         case 2:
                             memberList.add(new HeavyLifter(nome, email));
@@ -71,7 +71,12 @@ public abstract class Menu implements MemberApresentacao{
                     break;
 
                 case 4:
-                    apresentar(memberList);
+                    
+                    for (Member member : memberList) {
+                        member.apresentar(); 
+                        
+                    }
+                    
                     break;
                 
                 case 5:
