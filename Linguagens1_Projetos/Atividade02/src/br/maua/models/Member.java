@@ -1,6 +1,7 @@
 package br.maua.models;
 
 import br.maua.enums.MemberType;
+import br.maua.enums.SystemTime;
 import br.maua.interfaces.MemberApresentacao;
 import br.maua.interfaces.MemberPostarMensagem;
 
@@ -19,12 +20,20 @@ public abstract class Member implements MemberApresentacao,MemberPostarMensagem{
     
     @Override
     public void apresentar() {
-        // TODO Auto-generated method stub
-        System.out.println("Nome: "+ this.getNomeUsuario()
-        +"\nE-mail: " + this.getEmail()
-        +"\nCargo: "+ this.getCargo());
+        System.out.printf("\nNome: %s\nEmail: %s\nCargo: %s\n",this.getNomeUsuario(),this.getEmail(),this.getCargo());
     }
 
+        /** 
+     * @param mensagem
+     */
+    @Override
+    public void postarMensagem(String mensagem, SystemTime time) {
+        if (time.equals(SystemTime.REGULAR)) {
+            System.out.printf("\n%s %s - %s\n",this.getNomeUsuario(),mensagem,this.assRegular);   
+        } else {
+            System.out.printf("\n%s %s - %s\n",this.getNomeUsuario(),mensagem,this.assExtra);
+        }
+    }
     
     /** 
      * @return String
@@ -42,12 +51,4 @@ public abstract class Member implements MemberApresentacao,MemberPostarMensagem{
         return email;
     }
 
-
-    /** 
-     * @return String
-     */
-    @Override
-    public String toString() {
-        return "Member [email=" + email + ", nomeUsuario=" + nomeUsuario + "]";
-    }
 }

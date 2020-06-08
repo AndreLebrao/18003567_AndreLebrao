@@ -1,7 +1,7 @@
 package br.maua.models;
 
 import br.maua.enums.MemberType;
-import br.maua.enums.SystemTime;
+
 
 public class HeavyLifter extends Member{
     
@@ -13,16 +13,5 @@ public class HeavyLifter extends Member{
     }
 
     
-    /** 
-     * @param mensagem
-     */
-    @Override
-    public void postarMensagem(String mensagem, SystemTime time) {
-        if (time.equals(SystemTime.REGULAR)) {
-            System.out.printf(this.assRegular);   
-        } else {
-            System.out.printf(this.assExtra);
-        }
-    }
     
 }
