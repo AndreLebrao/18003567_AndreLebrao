@@ -1,9 +1,12 @@
 package br.maua.models;
 
+import java.util.ArrayList;
+
 import br.maua.enums.MemberType;
 import br.maua.enums.SystemTime;
+import br.maua.interfaces.MemberApresentacao;
 
-public abstract class Member {
+public abstract class Member implements MemberApresentacao{
     
     private String nomeUsuario;
     private String email;
@@ -26,6 +29,15 @@ public abstract class Member {
         }
     }
 
+    @Override
+    public void apresentar(ArrayList<Member> list) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    public String getNomeUsuario() {
+        return nomeUsuario;
+    }
     @Override
     public String toString() {
         return "Member [email=" + email + ", nomeUsuario=" + nomeUsuario + "]";
