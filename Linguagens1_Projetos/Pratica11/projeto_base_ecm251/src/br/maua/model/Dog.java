@@ -16,7 +16,7 @@ public class Dog extends Animal {
     public String eat(int amount) {
         return String.format("Dog: %s eated %d kilograms!", this.getName(), amount);
     }
-
+    
     
     /** 
      * @param distance
