@@ -1,7 +1,6 @@
 package br.maua.models;
 
 import br.maua.enums.MemberType;
-import br.maua.enums.SystemTime;
 
 public class ScriptGuy extends Member{
     public ScriptGuy(String nomeUsuario, String email) {
@@ -11,17 +10,4 @@ public class ScriptGuy extends Member{
         this.assExtra = "QU3Ro_S3us_r3curs0s.py";
     }
 
-    
-    
-    /** 
-     * @param mensagem 
-     */
-    @Override
-    public void postarMensagem(String mensagem, SystemTime time) {
-        if (time.equals(SystemTime.REGULAR)) {
-            System.out.printf(this.assRegular);   
-        } else {
-            System.out.printf(this.assExtra);
-        }
-    }
 }

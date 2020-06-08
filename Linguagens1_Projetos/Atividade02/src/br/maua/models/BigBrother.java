@@ -1,7 +1,7 @@
 package br.maua.models;
 
 import br.maua.enums.MemberType;
-import br.maua.enums.SystemTime;
+
 
 public class BigBrother extends Member {
     public BigBrother(String nomeUsuario, String email) {
@@ -11,17 +11,5 @@ public class BigBrother extends Member {
         this.assExtra = "...";
     }
 
-    
-    
-    /** 
-     * @param mensagem
-     */
-    @Override
-    public void postarMensagem(String mensagem, SystemTime time) {
-        if (time.equals(SystemTime.REGULAR)) {
-            System.out.printf(this.assRegular);   
-        } else {
-            System.out.printf(this.assExtra);
-        }
-    }
+
 }
