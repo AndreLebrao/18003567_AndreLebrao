@@ -43,11 +43,6 @@ public abstract class Menu implements MemberApresentacao{
     }
 
     public static void cadastrarMembro(String nome, String email, int cargo){
-        // try {
-        //TODO: colcoar todo método aqui dentro
-        // } catch (Exception e) {
-        //     //TODO: handle exception, tentamos achar algum erro mas não entendemos qual erro ele ta procurando.
-        // }
         switch (cargo) {
             case 1:
                 memberList.add(new MobileMember(nome, email));
@@ -62,15 +57,15 @@ public abstract class Menu implements MemberApresentacao{
                 memberList.add(new ScriptGuy(nome, email));
                 break;
             default:
+                System.out.println("Esse cargo não existe...");
                 break;
         }
     }
     public static void run(){
         boolean flag = true;
         int option;
+        Scanner scanner = new Scanner(System.in);
         while (flag) {
-            Scanner scanner = new Scanner(System.in);
-            
             System.out.println("Escolha uma opção: \n1 - Cadastrar\n2 - Remover\n3 - Postar Mensagem\n4 - Apresentar\n5 - Trocar Hora de Trabalho\n0 - Sair");
             System.out.printf("Hora de trabalho: %s\n\n",getSystemTime());
             option = scanner.nextInt();
@@ -87,6 +82,7 @@ public abstract class Menu implements MemberApresentacao{
                     System.out.println("\nEscolha o cargo:\n1 - Mobile Member\n2 - Heavy Lifter\n3 - Big Brother\n4 - Script Guy\n");
                     int cargo = scanner.nextInt();
                     scanner.nextLine();
+                    System.out.println(nome+"\n"+email+"\n"+cargo);
                     cadastrarMembro(nome, email, cargo);
                     break;
                 
@@ -119,8 +115,8 @@ public abstract class Menu implements MemberApresentacao{
                 default:
                     break;
             }
-            scanner.close();
-        }
         
+        }
+        scanner.close();
     }
 }
