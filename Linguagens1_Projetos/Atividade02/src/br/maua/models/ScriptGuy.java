@@ -2,9 +2,8 @@ package br.maua.models;
 
 import br.maua.enums.MemberType;
 import br.maua.enums.SystemTime;
-import br.maua.interfaces.MemberPostarMensagem;
 
-public class ScriptGuy extends Member implements MemberPostarMensagem {
+public class ScriptGuy extends Member{
     public ScriptGuy(String nomeUsuario, String email) {
         super(nomeUsuario, email);
         this.cargo = MemberType.SCRIPT_GUY;
@@ -13,9 +12,13 @@ public class ScriptGuy extends Member implements MemberPostarMensagem {
     }
 
     
+    
+    /** 
+     * @param mensagem 
+     */
     @Override
-    public void postarMensagem(String mensagem) {
-        if (this.sTime.equals(SystemTime.REGULAR)) {
+    public void postarMensagem(String mensagem, SystemTime time) {
+        if (time.equals(SystemTime.REGULAR)) {
             System.out.printf(this.assRegular);   
         } else {
             System.out.printf(this.assExtra);
