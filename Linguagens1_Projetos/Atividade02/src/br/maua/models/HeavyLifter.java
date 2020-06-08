@@ -11,7 +11,6 @@ public class HeavyLifter extends Member implements MemberPostarMensagem{
         this.cargo = MemberType.HEAVY_LIFTER;
         this.assRegular = "Podem contar conosco!";
         this.assExtra = "N00b_qu3_n_Se_r3pita.bat";
-        // TODO Auto-generated constructor stub
     }
 
     @Override

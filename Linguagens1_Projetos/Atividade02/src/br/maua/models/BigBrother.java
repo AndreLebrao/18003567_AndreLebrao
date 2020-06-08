@@ -10,7 +10,6 @@ public class BigBrother extends Member implements MemberPostarMensagem{
         this.cargo = MemberType.BIG_BROTHER;
         this.assRegular = "Sempre ajudando as pessoas membros ou não S2!";
         this.assExtra = "...";
-        // TODO Auto-generated constructor stub
     }
 
     
