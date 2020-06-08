@@ -2,9 +2,8 @@ package br.maua.models;
 
 import br.maua.enums.MemberType;
 import br.maua.enums.SystemTime;
-import br.maua.interfaces.MemberPostarMensagem;
 
-public class HeavyLifter extends Member implements MemberPostarMensagem{
+public class HeavyLifter extends Member{
     
     public HeavyLifter(String nomeUsuario, String email) {
         super(nomeUsuario, email);

@@ -1,11 +1,10 @@
 package br.maua.models;
 
-import java.util.ArrayList;
-
 import br.maua.enums.MemberType;
 import br.maua.interfaces.MemberApresentacao;
+import br.maua.interfaces.MemberPostarMensagem;
 
-public abstract class Member implements MemberApresentacao{
+public abstract class Member implements MemberApresentacao,MemberPostarMensagem{
     
     private String nomeUsuario;
     private String email;
@@ -18,13 +17,12 @@ public abstract class Member implements MemberApresentacao{
         this.email = email;
     }
     
-    /** 
-     * @param list
-     */
     @Override
-    public void apresentar(ArrayList<Member> list) {
+    public void apresentar() {
         // TODO Auto-generated method stub
-        
+        System.out.println("Nome: "+ this.getNomeUsuario()
+        +"\nE-mail: " + this.getEmail()
+        +"\nCargo: "+ this.getCargo());
     }
 
     
@@ -35,6 +33,16 @@ public abstract class Member implements MemberApresentacao{
         return nomeUsuario;
     }
     
+    public MemberType getCargo() {
+        return cargo;
+    }
+
+
+    public String getEmail() {
+        return email;
+    }
+
+
     /** 
      * @return String
      */

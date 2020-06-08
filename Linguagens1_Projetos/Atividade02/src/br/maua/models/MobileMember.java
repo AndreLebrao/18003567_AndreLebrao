@@ -2,11 +2,10 @@ package br.maua.models;
 
 import br.maua.enums.MemberType;
 import br.maua.enums.SystemTime;
-import br.maua.interfaces.MemberPostarMensagem;
 
-public class MobileMembers extends Member implements MemberPostarMensagem{
+public class MobileMember extends Member{
 
-    public MobileMembers(String nomeUsuario, String email) {
+    public MobileMember(String nomeUsuario, String email) {
         super(nomeUsuario, email);
         this.cargo = MemberType.MOBILE_MEMBER;
         this.assRegular = "Happy Coding!";

@@ -8,7 +8,7 @@ import br.maua.interfaces.MemberApresentacao;
 import br.maua.models.BigBrother;
 import br.maua.models.HeavyLifter;
 import br.maua.models.Member;
-import br.maua.models.MobileMembers;
+import br.maua.models.MobileMember;
 import br.maua.models.ScriptGuy;
 
 public abstract class Menu implements MemberApresentacao{
@@ -30,14 +30,6 @@ public abstract class Menu implements MemberApresentacao{
             return "Extra";
         }
     }
-    // @Override
-    // public static void apresentar(ArrayList<Member> list) {
-    //     int i = 0;
-    //     for (Member member : list) {
-    //         System.out.printf("%i - %s",i,member.getNomeUsuario());
-    //         i++;
-    //     }
-    // }
 
     public static void run(){
         boolean flag = true;
@@ -63,7 +55,7 @@ public abstract class Menu implements MemberApresentacao{
                     scanner.nextLine();
                     switch (cargo) {
                         case 1:
-                            memberList.add(new MobileMembers(nome, email));
+                            memberList.add(new MobileMember(nome, email));
                             break;
                         case 2:
                             memberList.add(new HeavyLifter(nome, email));
@@ -83,10 +75,15 @@ public abstract class Menu implements MemberApresentacao{
                     System.out.println("remover");
                     break;
                 case 3:
-                    System.out.println("postar msg");
+                    for (Member member : memberList) {
+                        member.postarMensagem("", sTime);
+                    }
                     break;
 
                 case 4:
+                    for (Member member : memberList) {
+                        member.apresentar();
+                    }
                     break;
                 
                 case 5:
