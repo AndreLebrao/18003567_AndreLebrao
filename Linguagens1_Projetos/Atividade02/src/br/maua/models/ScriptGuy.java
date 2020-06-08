@@ -13,9 +13,13 @@ public class ScriptGuy extends Member implements MemberPostarMensagem {
     }
 
     
+    
+    /** 
+     * @param mensagem 
+     */
     @Override
-    public void postarMensagem(String mensagem) {
-        if (this.sTime.equals(SystemTime.REGULAR)) {
+    public void postarMensagem(String mensagem, SystemTime time) {
+        if (time.equals(SystemTime.REGULAR)) {
             System.out.printf(this.assRegular);   
         } else {
             System.out.printf(this.assExtra);

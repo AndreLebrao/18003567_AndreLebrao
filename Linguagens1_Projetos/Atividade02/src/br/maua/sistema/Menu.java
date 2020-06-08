@@ -3,6 +3,7 @@ package br.maua.sistema;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import br.maua.enums.SystemTime;
 import br.maua.interfaces.MemberApresentacao;
 import br.maua.models.BigBrother;
 import br.maua.models.HeavyLifter;
@@ -13,8 +14,22 @@ import br.maua.models.ScriptGuy;
 public abstract class Menu implements MemberApresentacao{
 
     private static ArrayList<Member> memberList = new ArrayList<>();
+    private static SystemTime sTime = SystemTime.REGULAR;
     
-    
+    public static void trocarSystemTime(){
+        if (sTime.equals(SystemTime.REGULAR)) {
+            sTime = SystemTime.EXTRA;
+        } else {
+            sTime = SystemTime.REGULAR;
+        }
+    }
+    public static String getSystemTime(){
+        if (sTime.equals(SystemTime.REGULAR)) {
+            return "Regular";
+        } else {
+            return "Extra";
+        }
+    }
     // @Override
     // public static void apresentar(ArrayList<Member> list) {
     //     int i = 0;
@@ -31,6 +46,7 @@ public abstract class Menu implements MemberApresentacao{
             Scanner scanner = new Scanner(System.in);
             
             System.out.println("Escolha uma opção: \n1 - Cadastrar\n2 - Remover\n3 - Postar Mensagem\n4 - Apresentar\n5 - Trocar Hora de Trabalho\n0 - Sair");
+            System.out.printf("Hora de trabalho: %s\n\n",getSystemTime());
             option = scanner.nextInt();
             scanner.nextLine();
             switch (option) {
@@ -71,16 +87,14 @@ public abstract class Menu implements MemberApresentacao{
                     break;
 
                 case 4:
-                    apresentar(memberList);
                     break;
                 
                 case 5:
-                    System.out.println("trocar hora");
+                    trocarSystemTime();
                     break;
                 default:
                     break;
             }
-            System.out.println("\n\n");
         }
 
     }

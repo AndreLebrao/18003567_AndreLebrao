@@ -13,9 +13,13 @@ public class HeavyLifter extends Member implements MemberPostarMensagem{
         this.assExtra = "N00b_qu3_n_Se_r3pita.bat";
     }
 
+    
+    /** 
+     * @param mensagem
+     */
     @Override
-    public void postarMensagem(String mensagem) {
-        if (this.sTime.equals(SystemTime.REGULAR)) {
+    public void postarMensagem(String mensagem, SystemTime time) {
+        if (time.equals(SystemTime.REGULAR)) {
             System.out.printf(this.assRegular);   
         } else {
             System.out.printf(this.assExtra);
