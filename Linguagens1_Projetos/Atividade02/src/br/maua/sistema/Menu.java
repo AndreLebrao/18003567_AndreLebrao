@@ -30,6 +30,8 @@ public abstract class Menu implements MemberApresentacao{
             return "Extra";
         }
     }
+
+    //TODO: encapsular os metodos cadastrar e remover members, mas precisa lidar com o scanner abrindo e fechando
     public static void run(){
         boolean flag = true;
         int option;
@@ -46,7 +48,7 @@ public abstract class Menu implements MemberApresentacao{
                     break;
                 case 1:
                     // try {
-                        
+                            //TODO: colcoar da linha 53 a 75 aqui dentro
                     // } catch (Exception e) {
                     //     //TODO: handle exception
                     // }
