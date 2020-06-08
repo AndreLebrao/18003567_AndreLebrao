@@ -24,6 +24,8 @@ public class MobileMember extends Member{
     
     /** 
      * @param mensagem
+     * Imprime a assinatura do cargo dependendo da 
+     * hora do trabalho.
      */
     @Override
     public void postarMensagem (String mensagem, SystemTime time){
