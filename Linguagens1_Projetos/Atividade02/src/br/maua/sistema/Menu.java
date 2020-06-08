@@ -42,30 +42,13 @@ public abstract class Menu implements MemberApresentacao{
         }
     }
 
-    public static void cadastrarMembro(String nome, String email, int cargo){
-        switch (cargo) {
-            case 1:
-                memberList.add(new MobileMember(nome, email));
-                break;
-            case 2:
-                memberList.add(new HeavyLifter(nome, email));
-                break;
-            case 3:
-                memberList.add(new BigBrother(nome, email));
-                break;
-            case 4:
-                memberList.add(new ScriptGuy(nome, email));
-                break;
-            default:
-                System.out.println("Esse cargo não existe...");
-                break;
-        }
-    }
+    //TODO: encapsular os metodos cadastrar e remover members, mas precisa lidar com o scanner abrindo e fechando
     public static void run(){
         boolean flag = true;
         int option;
-        Scanner scanner = new Scanner(System.in);
         while (flag) {
+            Scanner scanner = new Scanner(System.in);
+            
             System.out.println("Escolha uma opção: \n1 - Cadastrar\n2 - Remover\n3 - Postar Mensagem\n4 - Apresentar\n5 - Trocar Hora de Trabalho\n0 - Sair");
             System.out.printf("Hora de trabalho: %s\n\n",getSystemTime());
             option = scanner.nextInt();
@@ -75,15 +58,41 @@ public abstract class Menu implements MemberApresentacao{
                     flag = false;
                     break;
                 case 1:
+                    // try {
+                            //TODO: colcoar da linha 53 a 75 aqui dentro
+                    // } catch (Exception e) {
+                    //     //TODO: handle exception
+                    // }
                     System.out.println("Nome: ");
                     String nome = scanner.nextLine();
                     System.out.println("Email: ");
                     String email = scanner.nextLine();
                     System.out.println("\nEscolha o cargo:\n1 - Mobile Member\n2 - Heavy Lifter\n3 - Big Brother\n4 - Script Guy\n");
                     int cargo = scanner.nextInt();
+                    /**
+                     * @param nome Nome do membro
+                     * @param email Email do membro
+                     * @param cargo Escolha do usuário em colocar
+                     * o membro como cargo de escolha.
+                     */
+
                     scanner.nextLine();
-                    System.out.println(nome+"\n"+email+"\n"+cargo);
-                    cadastrarMembro(nome, email, cargo);
+                    switch (cargo) {
+                        case 1:
+                            memberList.add(new MobileMember(nome, email));
+                            break;
+                        case 2:
+                            memberList.add(new HeavyLifter(nome, email));
+                            break;
+                        case 3:
+                            memberList.add(new BigBrother(nome, email));
+                            break;
+                        case 4:
+                            memberList.add(new ScriptGuy(nome, email));
+                            break;
+                        default:
+                            break;
+                    }
                     break;
                 
                 case 2:
@@ -96,7 +105,7 @@ public abstract class Menu implements MemberApresentacao{
                     for (Member member : memberList) {
                         member.postarMensagem("", sTime);
                         System.out.println();
-                        
+
                     }
                     break;
 
@@ -115,8 +124,7 @@ public abstract class Menu implements MemberApresentacao{
                 default:
                     break;
             }
-        
         }
-        scanner.close();
+
     }
 }
