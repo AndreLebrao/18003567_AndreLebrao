@@ -74,7 +74,6 @@ public abstract class Menu implements MemberApresentacao{
                     
                     for (Member member : memberList) {
                         member.apresentar(); 
-                        
                     }
                     
                     break;
