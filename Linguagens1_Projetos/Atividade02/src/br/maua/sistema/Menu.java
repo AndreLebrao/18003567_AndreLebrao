@@ -97,13 +97,15 @@ public abstract class Menu implements MemberApresentacao{
                 case 3:
                     for (Member member : memberList) {
                         member.postarMensagem("", sTime);
+                        System.out.println();
+                        
                     }
                     break;
 
                 case 4:
                     int ID = 0;
                     for (Member member : memberList) {
-                        System.out.printf("ID: "+ID);
+                        System.out.printf("ID: "+ID+"\n");
                         member.apresentar();
                         ID++;
                     }
