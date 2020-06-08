@@ -11,6 +11,17 @@ import br.maua.models.Member;
 import br.maua.models.MobileMember;
 import br.maua.models.ScriptGuy;
 
+/**
+ * Classe onde realmente ocorre o código
+ * Inicia as instâncias dos objetos, sendo que 
+ * é nesta classe que o usuário interage com o código.
+ * @author André Lebrão A Ribeiro 18.00356-7 - andledrao@gmail.com
+ * @author João Guilherme Martins Jatobá 18.01790-8 - jguilhermejatoba@hotmail.com
+ * @since 08/06/2000
+ * @version 1.0
+ */
+ 
+
 public abstract class Menu implements MemberApresentacao{
     
     private static ArrayList<Member> memberList = new ArrayList<>();
@@ -88,13 +99,15 @@ public abstract class Menu implements MemberApresentacao{
                 case 3:
                     for (Member member : memberList) {
                         member.postarMensagem("", sTime);
+                        System.out.println();
+                        
                     }
                     break;
 
                 case 4:
                     int ID = 0;
                     for (Member member : memberList) {
-                        System.out.printf("ID: "+ID);
+                        System.out.printf("ID: "+ID+"\n");
                         member.apresentar();
                         ID++;
                     }
