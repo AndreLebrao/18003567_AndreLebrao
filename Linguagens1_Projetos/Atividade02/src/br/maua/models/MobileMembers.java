@@ -11,7 +11,6 @@ public class MobileMembers extends Member implements MemberPostarMensagem{
         this.cargo = MemberType.MOBILE_MEMBER;
         this.assRegular = "Happy Coding!";
         this.assExtra = "Happy_C0d1ng.Maskers";
-        // TODO Auto-generated constructor stub
     }
     @Override
     public void postarMensagem (String mensagem) {
