@@ -50,7 +50,12 @@ public class GUI implements LerNumero{
                     listaPedidos.add(new Pedido(descricao, preco, mPagamento));
                     break;
                 case 2:
-                    System.out.println("verificar pedidos");
+                    int i = 0;
+                    for (Pedido pedido : listaPedidos) {
+                        System.out.printf("Pedido %d: %s\n",i,pedido.toString());
+                        i++;
+                    }
+                    System.out.println();
                     break;
                 case 3:
                     System.out.println("mudar pedido");

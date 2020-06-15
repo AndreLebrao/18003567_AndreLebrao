@@ -30,4 +30,10 @@ public class Pedido {
         this.mPagamento = mPagamento;
 
     }
+
+    @Override
+    public String toString() {
+        return "[descricao=" + descricao + ", estado=" + estado + ", idPedido=" + idPedido + ", mPagamento="
+                + mPagamento + ", valor=" + valor + "]";
+    }
 }
