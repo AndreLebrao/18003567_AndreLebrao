@@ -6,11 +6,11 @@ import br.maua.enums.EstadoPedido;
 import br.maua.enums.MetodoPagamento;
 
 public class Pedido {
-    String idPedido;
-    String descricao;
-    double valor;
-    EstadoPedido estado;
-    MetodoPagamento mPagamento;
+    private String idPedido;
+    private String descricao;
+    private double valor;
+    private EstadoPedido estado;
+    private MetodoPagamento mPagamento;
 
 
     private String geradorId(){

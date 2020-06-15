@@ -60,7 +60,48 @@ public class GUI implements LerNumero{
                     System.out.println();
                     break;
                 case 3:
-                    System.out.println("mudar pedido");
+                    System.out.println("ID do pedido: ");
+                    String ID = scanner.nextLine();
+                    System.out.println("Escolha o que alterar:\n1 - Descricao\n2 - Estado\n3 - Modo de Pagamento\n4 - Valor\n");
+                    int opcaoPedido = LerNumero.lerInt(scanner.nextLine());
+                    switch (opcaoPedido) {
+                        case 1:
+                            for (Pedido pedido : listaPedidos) {
+                                if (pedido.getIdPedido().equals(ID)) {
+                                //TODO: eu crio métodos pra alterar esses valores? eles são todos privados, não faz mto sentido eles terem setters se a validação de senha só ocorre aqui na GUI e não na hora de usar os métodos
+                                } else {
+                                    break;
+                                }
+                            }
+                        case 2:
+                            for (Pedido pedido : listaPedidos) {
+                                if (pedido.getIdPedido().equals(ID)) {
+                                    
+                                } else {
+                                    break;
+                                }
+                            }
+                        case 3:
+                            for (Pedido pedido : listaPedidos) {
+                                if (pedido.getIdPedido().equals(ID)) {
+                                    
+                                } else {
+                                    break;
+                                }
+                            }
+                        case 4:
+                            for (Pedido pedido : listaPedidos) {
+                                if (pedido.getIdPedido().equals(ID)) {
+                                    
+                                } else {
+                                    break;
+                                }
+                            }
+                            break;
+                    
+                        default:
+                            break;
+                    }
                     break;
             
                 default:
