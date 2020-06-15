@@ -11,12 +11,6 @@ public abstract class Funcionario {
         this.email = email;
     }
 
-    public String getSenha() {
-        return senha;
-    }
-    public String getEmail() {
-        return email;
-    }
     public String getNome() {
         return nome;
     }
