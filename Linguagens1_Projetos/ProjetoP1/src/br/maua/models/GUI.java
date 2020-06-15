@@ -2,23 +2,19 @@ package br.maua.models;
 
 import java.util.Scanner;
 
-public class GUI {
+import br.maua.interfaces.LerNumero;
+
+public class GUI implements LerNumero{
     public static void run() {
-        String rString;
         Scanner scanner = new Scanner(System.in);
         int resposta;
-
         System.out.println("Pizzaria o Rato que Ri:\n1 - Nova venda\n2 - Verificar pedidos\n3 - Alterar pedidos\n0 - Sair\n\n");
-        rString = scanner.nextLine();
-        try {
-            resposta = Integer.parseInt(rString);
-        } catch (Exception e) {
-            resposta = 9999;
-        }
+        resposta = LerNumero.lerInt(scanner.nextLine());
         while (resposta!=0) {
             switch (resposta) {
                 case 1:
-                    System.out.println("nova venda");
+                    System.out.println("Descricao do pedido: ");
+                    
                     break;
                 case 2:
                     System.out.println("verificar pedidos");
@@ -32,12 +28,8 @@ public class GUI {
                     break;
             }
             System.out.println("Pizzaria o Rato que Ri:\n1 - Nova venda\n2 - Verificar pedidos\n3 - Alterar pedidos\n0 - Sair\n\n");
-            rString = scanner.nextLine();
-            try {
-                resposta = Integer.parseInt(rString);
-            } catch (Exception e) {
-                resposta = 9999;
-            }
+            resposta = LerNumero.lerInt(scanner.nextLine());
         }
     }
+
 }

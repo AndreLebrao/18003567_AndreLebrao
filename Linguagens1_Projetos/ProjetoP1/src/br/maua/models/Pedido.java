@@ -21,4 +21,13 @@ public class Pedido {
         }
         return idGerado;
     }
+
+    public Pedido(String descricao, double valor, MetodoPagamento mPagamento) {
+        this.idPedido = geradorId();
+        this.descricao = descricao;
+        this.valor = valor;
+        this.estado = EstadoPedido.REALIZADO;
+        this.mPagamento = mPagamento;
+
+    }
 }
