@@ -9,7 +9,7 @@ import br.maua.interfaces.LerNumero;
 public class GUI implements LerNumero{
     private static ArrayList<Pedido> listaPedidos = new ArrayList<>();
     
-    public static void run() {
+    public static void run(Funcionario funcionario){
         Scanner scanner = new Scanner(System.in);
         int resposta;
         System.out.println("\nPizzaria o Rato que Ri:\n1 - Nova venda\n2 - Verificar pedidos\n3 - Alterar pedidos\n0 - Sair\n");
