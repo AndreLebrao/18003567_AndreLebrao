@@ -1,5 +1,5 @@
 package br.maua.interfaces;
 
 public interface Autenticacao {
-    public boolean autentication(String senha);
+    public boolean autentication();
 }
