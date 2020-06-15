@@ -42,6 +42,7 @@ public abstract class Menu implements MemberApresentacao{
         }
     }
 
+    //TODO: encapsular os metodos cadastrar e remover members, mas precisa lidar com o scanner abrindo e fechando
     public static void run(){
         boolean flag = true;
         int option;
@@ -55,8 +56,19 @@ public abstract class Menu implements MemberApresentacao{
             switch (option) {
                 case 0:
                     flag = false;
+                    /**
+                     * Acaba o código se a escolha for 0
+                     */
                     break;
                 case 1:
+                /**
+                 * Case 1 - Cadastro dos membros, com nome, email e cargo
+                 */
+                    // try {
+                            //TODO: colcoar da linha 53 a 75 aqui dentro
+                    // } catch (Exception e) {
+                    //     //TODO: handle exception
+                    // }
                     System.out.println("Nome: ");
                     String nome = scanner.nextLine();
                     System.out.println("Email: ");
@@ -72,6 +84,10 @@ public abstract class Menu implements MemberApresentacao{
 
                     scanner.nextLine();
                     switch (cargo) {
+                        /**
+                         * Cada case respresenta uma possível escolha de cargo
+                         * Default case impede a criação de cargo que não está na lista
+                         */
                         case 1:
                             memberList.add(new MobileMember(nome, email));
                             break;
@@ -90,12 +106,18 @@ public abstract class Menu implements MemberApresentacao{
                     break;
                 
                 case 2:
+                /**
+                 * Case 2 - Remoção de um membro da ArrayList principal
+                 */
                     System.out.println("Digite o ID do membro a ser retirado: ");
                     int index = scanner.nextInt();
                     scanner.nextLine();
                     memberList.remove(index);
                     break;
                 case 3:
+                /**
+                 * Case 3 - Imprime a assinatura de cada membro da lista
+                 */
                     for (Member member : memberList) {
                         member.postarMensagem("", sTime);
                         System.out.println();
@@ -104,6 +126,9 @@ public abstract class Menu implements MemberApresentacao{
                     break;
 
                 case 4:
+                /**
+                 * Case 4 - Imprime os dados (ID, Nome, Email e Cargo) de cada membro da lista
+                 */
                     int ID = 0;
                     for (Member member : memberList) {
                         System.out.printf("ID: "+ID+"\n");
@@ -113,9 +138,15 @@ public abstract class Menu implements MemberApresentacao{
                     break;
                 
                 case 5:
+                /** 
+                 * Case 5 - Troca a hora de trabalho atual
+                */
                     trocarSystemTime();
                     break;
                 default:
+                /**
+                 * Default impede cases que não são aceitas
+                 */
                     break;
             }
         }
