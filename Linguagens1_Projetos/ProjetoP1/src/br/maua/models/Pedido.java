@@ -31,9 +31,15 @@ public class Pedido {
 
     }
 
+    public String getIdPedido() {
+        return idPedido;
+    }
+
     @Override
     public String toString() {
-        return "[descricao=" + descricao + ", estado=" + estado + ", idPedido=" + idPedido + ", mPagamento="
-                + mPagamento + ", valor=" + valor + "]";
+        return "Pedido [descricao=" + descricao + ", estado=" + estado + ", mPagamento=" + mPagamento + ", valor="
+                + valor + "]";
     }
+
+    
 }
