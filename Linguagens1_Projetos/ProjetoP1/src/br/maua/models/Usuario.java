@@ -1,21 +1,20 @@
 package br.maua.models;
 
-public class Usuario {
-    String nome;
-    String senha;
-    String email;
+import br.maua.interfaces.Autenticacao;
+
+public class Usuario extends Funcionario implements Autenticacao{
 
     public Usuario(String nome, String senha, String email) {
-        this.nome = nome;
-        this.senha = senha;
-        this.email = email;
+        super(nome, senha, email);
     }
 
-    public boolean validarSenha(String senha){
+    @Override
+    public boolean autentication(String senha) {
         if (this.senha.equals(senha)) {
             return true;
         } else {
             return false;
         }
     }
+    
 }

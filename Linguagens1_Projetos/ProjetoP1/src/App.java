@@ -1,3 +1,4 @@
+import br.maua.models.Funcionario;
 import br.maua.models.Usuario;
 
 public class App {
