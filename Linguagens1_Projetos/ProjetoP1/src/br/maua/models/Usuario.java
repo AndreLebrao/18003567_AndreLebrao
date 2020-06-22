@@ -10,6 +10,11 @@ public class Usuario extends Funcionario implements Autenticacao{
         super(nome, senha, email);
     }
 
+    
+    /** 
+     * @return boolean
+     * Permite ao usuário digitar uma senha que será comparada com o atributo String senha do objeto Usuario atual
+     */
     @Override
     public boolean autentication() {
         Scanner aScanner = new Scanner(System.in);
