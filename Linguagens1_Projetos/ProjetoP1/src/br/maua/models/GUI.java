@@ -44,6 +44,9 @@ public class GUI implements LerNumero{
                     System.out.println();
                     break;
                 case 3:
+                    for (Pedido pedido : listaPedidos) {
+                        System.out.printf("ID: %s - %s\n",pedido.getIdPedido(),pedido.toString());
+                    }
                     boolean idEncontrado = false;
                     if (user.autentication()) {
                         System.out.println("ID do pedido: ");

@@ -1,6 +1,6 @@
 import br.maua.models.GUI;
 import br.maua.models.Usuario;
-
+//TODO: javadocs de tudo
 public class App {
     
     public static void main(String[] args) throws Exception {
