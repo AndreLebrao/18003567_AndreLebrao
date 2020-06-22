@@ -6,7 +6,11 @@ import java.util.Scanner;
 import br.maua.enums.MetodoPagamento;
 import br.maua.interfaces.LerNumero;
 
-public class GUI implements LerNumero{
+/**
+ * Classe abstrata que modela a interface gráfica da Pizzaria
+ */
+public abstract class GUI implements LerNumero{
+    
     private static ArrayList<Pedido> listaPedidos = new ArrayList<>();
     
     
