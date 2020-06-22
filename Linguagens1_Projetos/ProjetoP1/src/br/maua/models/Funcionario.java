@@ -1,5 +1,7 @@
 package br.maua.models;
-
+/**
+ * Classe abstrata para modelar qualquer outro Funcionário da Pizzaria
+ */
 public abstract class Funcionario {
     String nome;
     String senha;
