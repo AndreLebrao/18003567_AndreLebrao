@@ -10,6 +10,10 @@ public abstract class Funcionario {
         this.senha = senha;
         this.email = email;
     }
+    
+    /** 
+     * @return atributo String nome do objeto
+     */
     public String getNome() {
         return nome;
     }
