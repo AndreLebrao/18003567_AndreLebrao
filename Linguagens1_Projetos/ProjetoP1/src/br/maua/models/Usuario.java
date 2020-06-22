@@ -3,7 +3,13 @@ package br.maua.models;
 import java.util.Scanner;
 
 import br.maua.interfaces.Autenticacao;
-
+/**
+ * Subclasse de Funcionario, assina a interface Autenticacao
+ * É necessária para utilizar a interface gráfica da Pizzaria
+ * @see Funcionario
+ * @see Autenticacao
+ * @see GUI
+ */
 public class Usuario extends Funcionario implements Autenticacao{
 
     public Usuario(String nome, String senha, String email) {
