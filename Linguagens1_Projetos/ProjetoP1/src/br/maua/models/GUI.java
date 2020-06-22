@@ -12,7 +12,7 @@ public class GUI implements LerNumero{
     
     /** 
      * @param user
-     * 
+     * Interface gráfica que qualquer objeto Usuário pode utilizar para interagir com o sistema de gerenciamento da Pizzaria
      */
     public static void run(Usuario user){
         Scanner scanner = new Scanner(System.in);
