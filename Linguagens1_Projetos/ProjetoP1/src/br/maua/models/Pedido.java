@@ -7,6 +7,9 @@ import br.maua.enums.EstadoPedido;
 import br.maua.enums.MetodoPagamento;
 import br.maua.interfaces.LerNumero;
 
+/**
+ * Classe que modela um Pedido da Pizzaria
+ */
 public class Pedido {
     private String idPedido;
     private String descricao;
