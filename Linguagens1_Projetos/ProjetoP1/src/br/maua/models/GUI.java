@@ -9,6 +9,11 @@ import br.maua.interfaces.LerNumero;
 public class GUI implements LerNumero{
     private static ArrayList<Pedido> listaPedidos = new ArrayList<>();
     
+    
+    /** 
+     * @param user
+     * 
+     */
     public static void run(Usuario user){
         Scanner scanner = new Scanner(System.in);
         int resposta;
@@ -26,28 +31,7 @@ public class GUI implements LerNumero{
                             System.out.println("Preco invalido...");
                             break;
                         }
-                        System.out.println("Método de pagamento:\n1 - Dinheiro\n2 - Debito\n3 - Credito\n4 - Vale Alimentacao\n5 - VR\n");
-                        MetodoPagamento mPagamento = MetodoPagamento.DINHEIRO;
-                        int intMetodoPagamento = LerNumero.lerInt(scanner.nextLine());
-                        switch (intMetodoPagamento) {
-                            case 1:
-                                mPagamento = MetodoPagamento.DINHEIRO;
-                                break;
-                            case 2:
-                                mPagamento = MetodoPagamento.DEBITO;
-                                break;
-                            case 3:
-                                mPagamento = MetodoPagamento.CREDITO;
-                                break;
-                            case 4:
-                                mPagamento = MetodoPagamento.VALE_ALIMENTACAO;
-                                break;
-                            case 5:
-                                mPagamento = MetodoPagamento.VALE_REFEICAO;
-                                break;
-                            default:
-                                break;
-                        }
+                        MetodoPagamento mPagamento = Pedido.setMPagamento();
                         listaPedidos.add(new Pedido(descricao, preco, mPagamento));
                         }
                     else
