@@ -3,7 +3,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         //criando arvore
         GenericRootNode root = new GenericRootNode(0, "/user/rt/cursos", 19);
-        GenericNode nodeJava = new GenericNode(1, "/java/",root);
+        GenericNode nodeJava = new GenericNode(2, "/java/",root);
         GenericNode nodeRuby = new GenericNode(1, "/ruby/",root);
         GenericNode nodeG1 = new GenericNode(8,"Grades1",nodeJava );
         GenericNode nodeSld = new GenericNode(2,"Slides/",nodeJava );
@@ -12,7 +12,7 @@ public class App {
         GenericNode nodePjt = new GenericNode(1,"Projetos/",nodeRuby );
         GenericNode nodeS1 = new GenericNode(3,"Slide01",nodeSld );
         GenericNode nodeS2 = new GenericNode(2,"Slide02",nodeSld );
-        GenericNode nodeS3 = new GenericNode(3,"Slide03",nodeSld );
+        GenericNode nodeS3 = new GenericNode(4,"Slide03",nodeSld );
         GenericNode nodeE1 = new GenericNode(3,"Exerc01",nodeExs );
         GenericNode nodeE2 = new GenericNode(2,"Exerc02",nodeExs );
         GenericNode nodeE3 = new GenericNode(4,"Exerc03",nodeExs );
@@ -45,7 +45,6 @@ public class App {
         nodeDe.fChild = nodeMk;
         //nivel 4
         nodeTh.next = nodeBu;
-
-
+        GenericNode.preOrder(nodeJava);
     }
 }
