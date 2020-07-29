@@ -2,7 +2,7 @@ import models.*;
 public class App {
     public static void main(String[] args) throws Exception {
         //criando arvore
-        GenericRootNode root = new GenericRootNode(0, "/user/rt/cursos", 19);
+        GenericRootNode root = new GenericRootNode(1, "/user/rt/cursos", 19);
         GenericNode nodeJava = new GenericNode(2, "/java/",root);
         GenericNode nodeRuby = new GenericNode(1, "/ruby/",root);
         GenericNode nodeG1 = new GenericNode(8,"Grades1",nodeJava );
@@ -45,6 +45,11 @@ public class App {
         nodeDe.fChild = nodeMk;
         //nivel 4
         nodeTh.next = nodeBu;
-        GenericNode.preOrder(nodeJava);
+        //1a
+        GenericNode.getSum(nodeRuby);
+        //1b
+        GenericNode.getSum(nodeJava);
+        //1c
+        GenericNode.getSum(root);
     }
 }

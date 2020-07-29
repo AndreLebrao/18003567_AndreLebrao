@@ -1,17 +1,15 @@
 package models;
 
-public class GenericRootNode extends Node{
+public class GenericRootNode extends GenericNode{
 
-    public int size;
-    public final GenericNode parent = null;
-    public GenericNode fChild;
+    private int size;
 
+    public GenericRootNode(int data, String path,int size) {
+        super(data, path);
+        this.size = size;
+    }
 
-public GenericRootNode(int data, String path, int size){
-    this.path = path;
-    this.data = data;
-    this.size = size;
-    this.fChild = null;
+public int getSize(){
+    return this.size;
 }
-
 }
