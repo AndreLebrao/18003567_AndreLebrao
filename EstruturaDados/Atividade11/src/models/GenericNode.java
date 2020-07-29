@@ -3,9 +3,7 @@ package models;
 /**
  * Node
  */
-public class GenericNode {
-    public int data;
-    public String path;
+public class GenericNode extends Node{
     public GenericNode parent;
     public GenericNode fChild;
     public GenericNode next;
