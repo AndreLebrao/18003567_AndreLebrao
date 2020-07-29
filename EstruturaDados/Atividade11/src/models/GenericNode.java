@@ -4,16 +4,16 @@ package models;
  * Node
  */
 public class GenericNode extends Node{
-    public GenericNode parent;
+    public Node parent;
     public GenericNode fChild;
     public GenericNode next;
 
-    public GenericNode(int data, String path, GenericNode parent, GenericNode fChild, GenericNode next) {
+    public GenericNode(int data, String path, Node parent) {
         this.data = data;
         this.path = path;
         this.parent = parent;
-        this.fChild = fChild;
-        this.next = next;
+        this.fChild = null;
+        this.next = null;
     }
     public GenericNode(int data, String path){
         this.data = data;

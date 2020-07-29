@@ -2,9 +2,25 @@ import models.*;
 public class App {
     public static void main(String[] args) throws Exception {
         //criando arvore
-        GenericNode nodeJava = new GenericNode(1, "/java/");
-        GenericNode nodeRuby = new GenericNode(1, "/ruby/");
-        GenericRootNode root = new GenericRootNode(0, "/user/rt/cursos", nodeJava, 19);
-        GenericNode node = new GenericNode(data, path)
+        GenericRootNode root = new GenericRootNode(0, "/user/rt/cursos", 19);
+        GenericNode nodeJava = new GenericNode(1, "/java/",root);
+        GenericNode nodeRuby = new GenericNode(1, "/ruby/",root);
+        GenericNode nodeG1 = new GenericNode(8,"Grades1",nodeJava );
+        GenericNode nodeSld = new GenericNode(2,"Slides/",nodeJava );
+        GenericNode nodeExs = new GenericNode(1,"Exercicios/",nodeJava );
+        GenericNode nodeG2 = new GenericNode(5,"Grades2",nodeRuby );
+        GenericNode nodePjt = new GenericNode(1,"Projetos/",nodeRuby );
+        GenericNode nodeS1 = new GenericNode(3,"Slide01",nodeSld );
+        GenericNode nodeS2 = new GenericNode(2,"Slide02",nodeSld );
+        GenericNode nodeS3 = new GenericNode(3,"Slide03",nodeSld );
+        GenericNode nodeE1 = new GenericNode(3,"Exerc01",nodeExs );
+        GenericNode nodeE2 = new GenericNode(2,"Exerc02",nodeExs );
+        GenericNode nodeE3 = new GenericNode(4,"Exerc03",nodeExs );
+        GenericNode nodePp = new GenericNode(2,"Papers/",nodePjt );
+        GenericNode nodeDe = new GenericNode(1,"Demos/",nodePjt );
+        GenericNode nodeTh = new GenericNode(9,"Thread",nodePp );
+        GenericNode nodeBu = new GenericNode(8,"Buy",nodePp );
+        GenericNode nodeMk = new GenericNode(7,"Market",nodeDe );
+        //estabelecendo outras relacoes entre nos
     }
 }
