@@ -22,5 +22,30 @@ public class App {
         GenericNode nodeBu = new GenericNode(8,"Buy",nodePp );
         GenericNode nodeMk = new GenericNode(7,"Market",nodeDe );
         //estabelecendo outras relacoes entre nos
+        //nivel 0
+        root.fChild = nodeJava;
+        //nivel 1
+        nodeJava.next = nodeRuby;
+        nodeJava.fChild = nodeG1;
+        nodeRuby.fChild = nodeG2;
+        //nivel 2
+        nodeG1.next = nodeSld;
+        nodeSld.fChild = nodeS1;
+        nodeSld.next = nodeExs;
+        nodeExs.fChild = nodeE1;
+        nodeG2.next = nodePjt;
+        nodePjt.fChild = nodePp;
+        //nivel 3
+        nodeS1.next = nodeS2;
+        nodeS2.next = nodeS3;
+        nodeE1.next = nodeE2;
+        nodeE2.next = nodeE3;
+        nodePp.next = nodeDe;
+        nodePp.fChild = nodeTh;
+        nodeDe.fChild = nodeMk;
+        //nivel 4
+        nodeTh.next = nodeBu;
+
+
     }
 }
