@@ -45,6 +45,8 @@ public class App {
         nodeDe.fChild = nodeMk;
         //nivel 4
         nodeTh.next = nodeBu;
+        //Fim da arvore
+        
         //1a
         GenericNode.getSum(nodeRuby);
         //1b
