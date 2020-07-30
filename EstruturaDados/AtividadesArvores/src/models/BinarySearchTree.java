@@ -47,15 +47,7 @@ public class BinarySearchTree {
         }
     }
     public boolean isIn(int data) {
-        BinaryNode aux = this.root;
-        int i = 0;
-        while (i<this.size) {
-        if (data < aux.data)
-        aux = aux.left;
-        else
-        aux = aux.right;
-        if(aux.data==data)
-            return true;
+
         }
         return false;
         }
@@ -70,6 +62,5 @@ public class BinarySearchTree {
         public int minData(){
             return minNodeData(this.root);
         }
-        
 }
 
