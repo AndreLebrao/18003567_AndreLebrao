@@ -27,5 +27,10 @@ public class Atividade12 {
         //4
         System.out.printf("\nMaior valor da arvore: %d",tree.maxData());
         //5
+        System.out.printf("\nMenor valor da arvore: %d",tree.minData());
+        //6
+        System.out.printf("\nMedia valor da arvore: %.2f",tree.mediaValores());
+        //7
+        System.out.printf("\nMaior valor da arvore: %d",tree.countNull());
     }
 }

@@ -38,10 +38,29 @@ public class BinaryTree {
     public int minData(){
         int menor = this.tree.get(0).data;
         for (BinaryNode binaryNode : this.tree) {
-            if(binaryNode.data>menor){
+            if(binaryNode.data<menor){
                 menor = binaryNode.data;
             }
         }
         return menor;
+    }
+    public double mediaValores(){
+        int media = 0;
+        for (BinaryNode binaryNode : this.tree) {
+            media+=binaryNode.data;
+        }
+        return media/size;
+    }
+    public int countNull(){
+        int quant = 0;
+        for (BinaryNode binaryNode : this.tree) {
+            if(binaryNode.left==null){
+                quant+=1;
+            }
+            if(binaryNode.right==null){
+                quant+=1;
+            }
+        }
+        return quant;
     }
 }
