@@ -5,6 +5,7 @@ package models;
  */
 public class GenericNode extends Node{
     public Node parent;
+    public String path;
     public GenericNode fChild;
     public GenericNode next;
     protected static int sum = 0;
