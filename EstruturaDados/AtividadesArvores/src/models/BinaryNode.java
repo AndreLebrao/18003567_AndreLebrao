@@ -1,19 +1,21 @@
 package models;
 
 public class BinaryNode extends Node{
-    BinaryNode left;
-    BinaryNode right;
+    public BinaryNode parent;
+    public BinaryNode left;
+    public BinaryNode right;
     
     public BinaryNode(int data){
+        this.parent = null;
         this.left = null;
         this.right = null;
         this.data = data;
     }
     
     public BinaryNode(int data,BinaryNode left, BinaryNode right){
+        this.data = data;
         this.left = left;
         this.right = right;
-        this.data = data;
     }
 
     public static void preOrder(BinaryNode node){

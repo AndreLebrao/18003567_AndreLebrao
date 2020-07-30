@@ -54,12 +54,13 @@ public class BinaryTree {
     public int countNull(){
         int quant = 0;
         for (BinaryNode binaryNode : this.tree) {
-            if(binaryNode.left==null){
+            if(binaryNode.left==null)
                 quant+=1;
-            }
-            if(binaryNode.right==null){
+            if(binaryNode.right==null)
                 quant+=1;
-            }
+            if(binaryNode.parent==null)
+                quant+=1;
+            
         }
         return quant;
     }
