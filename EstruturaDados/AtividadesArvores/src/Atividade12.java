@@ -39,5 +39,11 @@ public class Atividade12 {
         System.out.printf("\nMedia valor da arvore: %.2f",tree.mediaValores());
         //7
         System.out.printf("\nQuantidade de nodes nulos: %d",tree.countNull());
+        //8
+        System.out.printf("\nQuantidade de nodes: %d",tree.getSize());
+        //9
+        System.out.printf("\nQuantidade de folhas: %d",tree.countLeaf());
+        //10
+        System.out.printf("\nAltura da arvore: %d",BinaryNode.depth(root));
     }
 }

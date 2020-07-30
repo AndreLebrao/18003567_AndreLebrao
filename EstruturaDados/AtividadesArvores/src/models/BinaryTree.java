@@ -64,4 +64,13 @@ public class BinaryTree {
         }
         return quant;
     }
+    public int countLeaf(){
+        int quant = 0;
+        for (BinaryNode binaryNode : this.tree) {
+            if(binaryNode.left==null && binaryNode.right == null)
+                quant+=1;   
+        }
+        return quant;
+    }
+
 }
