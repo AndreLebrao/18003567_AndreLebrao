@@ -47,19 +47,6 @@ public class BinaryNode extends Node{
         if(node.right!=null)
             inOrder(node.right);
     }
-    public static void isIn(BinaryNode root, int data){
-        
-        if (root.data==data){
-            System.out.printf("\nSim, %d esta presente na arvore",data);
-            return;
-        }
-            
-        if(root.left!=null)
-        isIn(root.left,data);
-
-        if(root.right!=null)
-        isIn(root.right,data);
-    }
 }
 
 

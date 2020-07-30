@@ -18,4 +18,30 @@ public class BinaryTree {
         return this.size;
     }
     
+    public void isIn(int data){
+        for (BinaryNode binaryNode : this.tree) {
+            if(binaryNode.data==data){
+                System.out.printf("\nO valor %d esta nessa arvore",binaryNode.data);
+                break;
+            }
+        }
+    }
+    public int maxData(){
+        int maior = 0;
+        for (BinaryNode binaryNode : this.tree) {
+            if(binaryNode.data>maior){
+                maior = binaryNode.data;
+            }
+        }
+        return maior;
+    }
+    public int minData(){
+        int menor = this.tree.get(0).data;
+        for (BinaryNode binaryNode : this.tree) {
+            if(binaryNode.data>menor){
+                menor = binaryNode.data;
+            }
+        }
+        return menor;
+    }
 }
