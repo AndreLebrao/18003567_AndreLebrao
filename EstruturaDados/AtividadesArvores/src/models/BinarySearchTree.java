@@ -59,6 +59,17 @@ public class BinarySearchTree {
         }
         return false;
         }
+        private int minNodeData(BinaryNode node) { 
+            BinaryNode aux = node; 
     
+            while (aux.left != null) { 
+                aux = aux.left; 
+            } 
+            return (aux.data); 
+        }
+        public int minData(){
+            return minNodeData(this.root);
+        }
+        
 }
 

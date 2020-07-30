@@ -14,12 +14,25 @@ public class Atividade14 {
         searchTree.addNode(nodes[2]);//8
         searchTree.addNode(nodes[4]);//10
         //3
-        // BinaryNode.preOrder(searchTree.root);
-        // //4
-        // BinaryNode.posOrder(searchTree.root);
-        // //5
-        // BinaryNode.inOrder(searchTree.root);
+        System.out.println("PreOrder:");
+        BinaryNode.preOrder(searchTree.root);
+        System.out.println();
+        //4
+        System.out.println("PosOrder:");
+        BinaryNode.posOrder(searchTree.root);
+        System.out.println();
+        //5
+        System.out.println("InOrder:");
+        BinaryNode.inOrder(searchTree.root);
+        System.out.println();
         //6
+        System.out.println("Valor K = 8 esta na arvore?");
         System.out.println(searchTree.isIn(8));
+        System.out.println("Valor K = 32 esta na arvore?");
+        System.out.println(searchTree.isIn(32));
+        //7
+        System.out.println("Menor valor da arvore: ");
+        System.out.println(searchTree.minData());
+        //8
     }
 }
