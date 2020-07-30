@@ -7,18 +7,19 @@ public class Atividade14 {
         BinarySearchTree searchTree = new BinarySearchTree();
         //1 e 2
         //implementando arvore a partir do array
-        searchTree.addNode(7);
-        searchTree.addNode(5);
-        searchTree.addNode(3);
-        searchTree.addNode(9);
-        searchTree.addNode(8);
-        searchTree.addNode(10);
+        searchTree.addNode(nodes[1]);//7
+        searchTree.addNode(nodes[5]);//5
+        searchTree.addNode(nodes[0]);//3
+        searchTree.addNode(nodes[3]);//9
+        searchTree.addNode(nodes[2]);//8
+        searchTree.addNode(nodes[4]);//10
         //3
-        BinaryNode.preOrder(searchTree.root);
-        //4
-        BinaryNode.posOrder(searchTree.root);
-        //5
-        BinaryNode.inOrder(searchTree.root);
-        
+        // BinaryNode.preOrder(searchTree.root);
+        // //4
+        // BinaryNode.posOrder(searchTree.root);
+        // //5
+        // BinaryNode.inOrder(searchTree.root);
+        //6
+        System.out.println(searchTree.isIn(8));
     }
 }

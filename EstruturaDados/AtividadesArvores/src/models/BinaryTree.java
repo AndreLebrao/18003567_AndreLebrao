@@ -1,5 +1,6 @@
 package models;
 import java.util.ArrayList;
+
 public class BinaryTree {
     private int size;
     private ArrayList<BinaryNode> tree;
