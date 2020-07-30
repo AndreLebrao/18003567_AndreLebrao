@@ -1,5 +1,5 @@
 import models.*;
-public class App {
+public class Atividade11 {
     public static void main(String[] args) throws Exception {
         //criando arvore
         GenericRootNode root = new GenericRootNode(1, "/user/rt/cursos", 19);
