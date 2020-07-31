@@ -4,7 +4,6 @@ public class BinarySearchTree {
 
     public BinaryNode root;
     public int size = 0;
-    private int aux = 0;
 
     public BinarySearchTree(){
         root = null;
