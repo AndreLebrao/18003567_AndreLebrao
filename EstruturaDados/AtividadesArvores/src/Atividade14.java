@@ -29,10 +29,10 @@ public class Atividade14 {
         System.out.println("Valor K = 8 esta na arvore?");
         System.out.println(searchTree.isIn(8));
         System.out.println("Valor K = 32 esta na arvore?");
-        System.out.println(searchTree.isIn(32));
+        System.out.println(searchTree.isIn(27));
         //7
         System.out.println("Menor valor da arvore: ");
-        System.out.println(searchTree.minData());
+        System.out.println(searchTree.minNode());
         //8
     }
 }

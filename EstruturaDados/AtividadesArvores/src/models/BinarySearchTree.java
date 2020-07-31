@@ -46,21 +46,32 @@ public class BinarySearchTree {
 
         }
     }
+    public int minNode(){
+        return BinaryNode.minNodeData(this.root);
+    }
+    
     public boolean isIn(int data) {
 
-        }
+        if(this.root==null)
         return false;
+        else{
+            BinaryNode aux = this.root;
+            while(aux!=null){
+                if(aux.data==data)
+                    return true;
+                else{
+                    if(data>aux.data)
+                        aux = aux.right;
+                    else
+                        aux=aux.left;
+                }
+            }
+            return false;
         }
-        private int minNodeData(BinaryNode node) { 
-            BinaryNode aux = node; 
+    }
     
-            while (aux.left != null) { 
-                aux = aux.left; 
-            } 
-            return (aux.data); 
-        }
-        public int minData(){
-            return minNodeData(this.root);
-        }
+
+    
+
 }
 

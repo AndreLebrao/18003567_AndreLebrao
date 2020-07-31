@@ -61,6 +61,14 @@ public class BinaryNode extends Node{
             return rightDepth+1;
         }
     }
+    public static int minNodeData(BinaryNode node) { 
+        BinaryNode aux = node; 
+
+        while (aux.left != null) { 
+            aux = aux.left; 
+        } 
+        return (aux.data); 
+    }
 }
 
 
