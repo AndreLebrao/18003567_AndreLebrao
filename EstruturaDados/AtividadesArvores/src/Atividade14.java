@@ -44,7 +44,7 @@ public class Atividade14 {
         System.out.println(searchTree.getDepth());
         //11
         System.out.println("Quantidade de nodes nulos: ");
-
+        System.out.println(BinaryNode.countNull(searchTree.root));
         //12
         System.out.println("Multiplos de 2: ");
         BinaryNode.evenNodes(searchTree.root);
