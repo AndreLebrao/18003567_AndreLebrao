@@ -47,7 +47,7 @@ public class Atividade14 {
 
         //12
         System.out.println("Multiplos de 2: ");
-
+        BinaryNode.evenNodes(searchTree.root);
         //13
         System.out.println("Soma dos valores da arvore: ");
         System.out.println(searchTree.getSum());

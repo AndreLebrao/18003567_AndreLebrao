@@ -74,6 +74,17 @@ public class BinaryNode extends Node{
             return 0;  
         return (node.data + treeSum(node.left) + treeSum(node.right));  
     }
+    public static void evenNodes(BinaryNode node){
+        if(node.data%2==0)
+        System.out.printf("\t%d",node.data);
+
+        if(node.left!=null)
+        preOrder(node.left);
+
+        if(node.right!=null)
+        preOrder(node.right);
+
+    }
 }
 
 

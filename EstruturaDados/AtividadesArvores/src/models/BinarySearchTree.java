@@ -85,5 +85,6 @@ public class BinarySearchTree {
     public int getSum(){
         return BinaryNode.treeSum(this.root);
     }
+    
 }
 
