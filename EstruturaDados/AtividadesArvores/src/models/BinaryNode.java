@@ -49,17 +49,18 @@ public class BinaryNode extends Node{
         if(node.right!=null)
             inOrder(node.right);
     }
-    public static int depth(BinaryNode node){
-        if(node.left==null)
-            return 0;
-        else{
-            int leftDepth = depth(node.left);
-            int rightDepth = depth(node.right);
+    public static int depth(BinaryNode node){ 
+        if (node == null) 
+            return 0; 
+        else{ 
+            int lDepth = depth(node.left); 
+            int rDepth = depth(node.right); 
 
-            if(leftDepth>rightDepth)
-                return leftDepth+1;
-            return rightDepth+1;
-        }
+            if (lDepth > rDepth) 
+                return (lDepth + 1); 
+             else 
+                return (rDepth + 1); 
+        } 
     }
     public static int minNodeData(BinaryNode node) { 
         BinaryNode aux = node; 
