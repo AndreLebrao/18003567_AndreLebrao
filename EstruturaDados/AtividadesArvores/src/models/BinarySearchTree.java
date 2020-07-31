@@ -70,7 +70,9 @@ public class BinarySearchTree {
         }
     }
     
-
+    public int getSize(){
+        return this.size;
+    }
     
 
 }
