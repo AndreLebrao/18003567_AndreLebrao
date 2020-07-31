@@ -69,6 +69,11 @@ public class BinaryNode extends Node{
         } 
         return (aux.data); 
     }
+    public static int treeSum(BinaryNode node){  
+        if (node == null)  
+            return 0;  
+        return (node.data + treeSum(node.left) + treeSum(node.right));  
+    }
 }
 
 

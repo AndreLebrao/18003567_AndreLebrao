@@ -4,6 +4,7 @@ public class BinarySearchTree {
 
     public BinaryNode root;
     public int size = 0;
+    private int aux = 0;
 
     public BinarySearchTree(){
         root = null;
@@ -73,7 +74,16 @@ public class BinarySearchTree {
     public int getSize(){
         return this.size;
     }
-    
 
+    public int getDepth(){
+        return BinaryNode.depth(this.root);
+    }
+
+    public double getAverage(){
+        return BinaryNode.treeSum(this.root)/this.size;
+    }
+    public int getSum(){
+        return BinaryNode.treeSum(this.root);
+    }
 }
 

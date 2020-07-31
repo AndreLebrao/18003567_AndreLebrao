@@ -34,5 +34,22 @@ public class Atividade14 {
         System.out.println("Menor valor da arvore: ");
         System.out.println(searchTree.minNode());
         //8
+        System.out.println("Quantidade de nodes na arvore:");
+        System.out.println(searchTree.getSize());
+        //9
+        System.out.println("Media aritmetica de todos os nodes: ");
+        System.out.println(searchTree.getAverage());
+        //10
+        System.out.println("Altura da arvore: ");
+        System.out.println(searchTree.getDepth());
+        //11
+        System.out.println("Quantidade de nodes nulos: ");
+
+        //12
+        System.out.println("Multiplos de 2: ");
+
+        //13
+        System.out.println("Soma dos valores da arvore: ");
+        System.out.println(searchTree.getSum());
     }
 }
