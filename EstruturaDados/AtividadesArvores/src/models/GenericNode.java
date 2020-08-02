@@ -37,7 +37,7 @@ public class GenericNode extends Node{
     }
     public static void getSum(GenericNode node){
         preOrder(node);
-        System.out.printf("\nTamanho total do diretorio: %d KB",sum);
+        System.out.printf("Tamanho total do diretorio: %d KB\n\n",sum);
         sum = 0;
     }
     //Nao consegui encontrar uma condicional que identifique o ultimo node da travessia em vez do ultimo node folha sem node proximo entao usei uma variavel static para isso

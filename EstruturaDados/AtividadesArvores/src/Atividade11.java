@@ -48,10 +48,13 @@ public class Atividade11 {
         //Fim da arvore
         
         //1a
+        System.out.println("Diretorio Ruby: ");
         GenericNode.getSum(nodeRuby);
         //1b
+        System.out.println("Diretorio Java: ");
         GenericNode.getSum(nodeJava);
         //1c
+        System.out.println("Tudo: ");
         GenericNode.getSum(root);
     }
 }

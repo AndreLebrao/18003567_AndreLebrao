@@ -91,8 +91,12 @@ public class BinaryNode extends Node{
     public static int countNull(BinaryNode node){ 
         if (node == null) 
             return 0;
+        //contando os 2 nodes nulos de um node folha
         if (node.left == null && node.right == null) 
             return 2; 
+        //quando um node interno nao tem 2 filhos, precisamos levar em consideracao esse node nulo extra
+        else if (node.left == null || node.right == null) 
+            return 3; 
         else
             return countNull(node.left) + countNull(node.right); 
     }

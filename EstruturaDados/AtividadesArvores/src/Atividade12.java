@@ -26,9 +26,15 @@ public class Atividade12 {
         //fim da arvore
         //Exercicios
         //2
-        // BinaryNode.preOrder(root);
-        // BinaryNode.posOrder(root);
-        // BinaryNode.inOrder(root);
+        System.out.printf("PreOrder:");
+        BinaryNode.preOrder(root);
+        System.out.println();
+        System.out.printf("PosOrder:");
+        BinaryNode.posOrder(root);
+        System.out.println();
+        System.out.printf("InOrder:");
+        BinaryNode.inOrder(root);
+        System.out.println();
         //3
         tree.isIn(5);
         //4
