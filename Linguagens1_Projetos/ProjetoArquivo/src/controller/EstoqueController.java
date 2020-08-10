@@ -37,4 +37,7 @@ public class EstoqueController {
         sc.nextLine();
         this.estoque.get(resposta-1).setQuantidade(quantidade);
     }
+    public void salvarEstoque(){
+        
+    }
 }
