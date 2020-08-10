@@ -42,6 +42,6 @@ public class EstoqueController {
         Arquivo.escreverArquivo("Estoque.json", EstoqueParser.toJson(this.estoque));
     }
     public void lerEstoque(){
-        Arquivo.lerArquivo(nomeArquivo)
+        this.estoque = EstoqueParser.fromJson(Arquivo.lerArquivo(nomeArquivo));
     }
 }
