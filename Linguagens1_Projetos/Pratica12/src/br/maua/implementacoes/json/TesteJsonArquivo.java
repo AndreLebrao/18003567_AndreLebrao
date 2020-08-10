@@ -1,7 +1,9 @@
 package br.maua.implementacoes.json;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 
 import org.json.JSONArray;
@@ -47,5 +49,26 @@ public class TesteJsonArquivo {
             System.out.println("Algo deu errado!");
             exception.printStackTrace();
         }
+    }
+    private static JSONArray lerArquivo(String nomeArquivo) {
+        JSONArray json = null;
+        File file = new File(nomeArquivo);
+        try{
+            //Cria o fluxo de leitura
+            FileReader fileReader = new FileReader(file);
+            //Buffer de leitura
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+            json = new JSONArray (bufferedReader.readLine());
+
+            //Feche tudo ao terminar
+            bufferedReader.close();
+            fileReader.close();
+
+        }catch (Exception exception){
+            System.out.println("Algo deu errado!");
+            exception.printStackTrace();
+        }
+        return json;
     }
 }
