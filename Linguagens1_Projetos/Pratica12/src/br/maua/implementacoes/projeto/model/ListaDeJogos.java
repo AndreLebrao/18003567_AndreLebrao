@@ -17,5 +17,8 @@ public class ListaDeJogos {
     public String toString() {
         return "ListaDeJogos = " + minhaListaDeJogos;
     }
+    public final List<Jogo> getJogos() {
+        return this.minhaListaDeJogos;
+    }
     
 }
