@@ -1,4 +1,4 @@
-package br.maua.model;
+package br.maua.implementacoes.projeto.model;
 
 import java.util.ArrayList;
 import java.util.List;

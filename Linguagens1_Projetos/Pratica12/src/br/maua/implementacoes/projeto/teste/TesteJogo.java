@@ -1,6 +1,6 @@
-package br.maua.teste;
+package br.maua.implementacoes.projeto.teste;
 
-import br.maua.model.Jogo;
+import br.maua.implementacoes.projeto.model.Jogo;
 
 public class TesteJogo {
     public static void main(String[] args) {

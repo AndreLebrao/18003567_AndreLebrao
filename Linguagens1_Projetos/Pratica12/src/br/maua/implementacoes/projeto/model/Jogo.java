@@ -1,6 +1,7 @@
-package br.maua.model;
+package br.maua.implementacoes.projeto.model;
 
 import br.maua.enumeracoes.Status;
+import org.json.JSONObject;
 
 public class Jogo {
     private String plataforma;
