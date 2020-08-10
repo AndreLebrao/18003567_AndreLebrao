@@ -1,28 +1,31 @@
-package enums;
+package br.maua.enumeracoes;
 
 public enum Status {
-    NAO_INICIADO{
+    PLATINADO{
+        
         @Override
         public String toString() {
-            return "Não Iniciado";
+            return "Platinado";
         }
-    }, 
-    TERMINADO{
+    }, NAO_INICIADO{
+        @Override
+    public String toString() {
+        return "Nao Iniciado";
+    }
+}, TERMINADO{
         @Override
         public String toString() {
             return "Terminado";
         }
-    }, 
-    JOGANDO{
+    }, JOGANDO{
         @Override
         public String toString() {
             return "Jogando";
         }
-    }, 
-    ABANDONADO{
+    }, NAO_ACABADO{
         @Override
         public String toString() {
-            return "Não estou jogando, pois estou estudando, mas voltarei a jogar assim que possível!";
+            return "Nao Acabado";
         }
-    }
+    };
 }

@@ -1,12 +1,12 @@
-package models;
+package br.maua.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ListaDeJogos {
     private List<Jogo> minhaListaDeJogos;
-    
-    public ListaDeJogos(){
+
+    public ListaDeJogos() {
         this.minhaListaDeJogos = new ArrayList<>();
     }
     public void addJogo(Jogo jogo){
@@ -15,7 +15,7 @@ public class ListaDeJogos {
 
     @Override
     public String toString() {
-        return "ListaDeJogos [minhaListaDeJogos=" + minhaListaDeJogos + "]";
+        return "ListaDeJogos = " + minhaListaDeJogos;
     }
     
 }
