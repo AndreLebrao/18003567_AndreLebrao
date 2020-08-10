@@ -12,6 +12,7 @@ public class EstoqueTest {
         estoque.adicionarProduto(new Produto(1.50, "Halls", 15));
         estoque.adicionarProduto(new Produto(4, "Carta de Pokemon", 50));
 
+        estoque.salvarEstoque();
         
     }
 }

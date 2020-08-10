@@ -1,13 +1,14 @@
 package controller;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 import models.Produto;
+import parsers.EstoqueParser;
+import serializacao.Arquivo;
 
 public class EstoqueController {
-    private List<Produto> estoque = new ArrayList<>();
+    private ArrayList<Produto> estoque = new ArrayList<>();
     final static Scanner sc = new Scanner(System.in);
 
     public EstoqueController(){}
@@ -38,6 +39,9 @@ public class EstoqueController {
         this.estoque.get(resposta-1).setQuantidade(quantidade);
     }
     public void salvarEstoque(){
-        
+        Arquivo.escreverArquivo("Estoque.json", EstoqueParser.toJson(this.estoque));
+    }
+    public void lerEstoque(){
+        Arquivo.lerArquivo(nomeArquivo)
     }
 }

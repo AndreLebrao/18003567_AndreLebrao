@@ -10,7 +10,7 @@ import org.json.JSONArray;
 
 public class Arquivo {
     
-    private static void escreverArquivo(String nomeArquivo, JSONArray json) {
+    public static void escreverArquivo(String nomeArquivo, JSONArray json) {
         //Cria um arquivo
         File file = new File(nomeArquivo);
         try{
@@ -33,7 +33,7 @@ public class Arquivo {
             exception.printStackTrace();
         }
     }
-    private static JSONArray lerArquivo(String nomeArquivo) {
+    public static JSONArray lerArquivo(String nomeArquivo) {
         JSONArray json = null;
         File file = new File(nomeArquivo);
         try{
