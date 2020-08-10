@@ -27,5 +27,10 @@ public enum Status {
         public String toString() {
             return "Nao Acabado";
         }
+    }, ABANDONADO{
+        @Override
+        public String toString(){
+            return "Abandonado";
+        }
     };
 }

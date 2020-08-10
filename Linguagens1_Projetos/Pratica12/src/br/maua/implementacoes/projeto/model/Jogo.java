@@ -24,5 +24,14 @@ public class Jogo {
     public void setStatusJogando() {
         this.status = Status.JOGANDO;
     }
+    public String getNome() {
+        return nome;
+    }
+    public String getPlataforma() {
+        return plataforma;
+    }
+    public String getStatus() {
+        return ""+status;
+    }
 }
 	
