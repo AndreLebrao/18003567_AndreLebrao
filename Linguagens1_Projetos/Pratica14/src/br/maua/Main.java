@@ -1,8 +1,8 @@
 package br.maua;
-
+import br.maua.testes.*;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+	Aplicacao.run();
     }
 }
