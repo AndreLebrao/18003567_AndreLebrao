@@ -8,6 +8,10 @@ public class Produto {
     private double valor;
     private int quantidade;
 
+    public Produto(String codigo) {
+        this(codigo,null,null,0.0,0.0,0);
+    }
+
     public String getCodigo() {
         return codigo;
     }
