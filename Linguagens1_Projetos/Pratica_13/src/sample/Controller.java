@@ -11,9 +11,15 @@ public class Controller {
     @FXML
     private Button btnAction;
     @FXML
+    private Button btnTeste;
+    @FXML
     private TextField txtEntrada;
     @FXML
     public void olaMundoCLI(){
         System.out.println("Ola Mundo CLI");
+    }
+    @FXML
+    public void printTeste(){
+        System.out.println("Novo botao");
     }
 }
