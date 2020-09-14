@@ -1,5 +1,7 @@
 package br.maua;
 
+import br.maua.models.CLI;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -12,8 +14,7 @@ import java.net.http.HttpResponse;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-//	    leituraJavaAte8();
-        leituraJava11();
+        CLI.run();
     }
 
     private static void leituraJava11() throws Exception{
