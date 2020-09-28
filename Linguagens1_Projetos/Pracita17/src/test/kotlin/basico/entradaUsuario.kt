@@ -1,5 +1,4 @@
 package basico
-
 fun main(){
     print("Informe um nome:")
     var nome = readLine()
