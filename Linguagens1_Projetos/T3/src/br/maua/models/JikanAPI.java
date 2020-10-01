@@ -17,8 +17,8 @@ public class JikanAPI {
                 .build();
         HttpResponse<String> response = client.send(request,
                 HttpResponse.BodyHandlers.ofString());
-        JSONObject json = new JSONObject(response.body());
         //TODO tratar caso de um nome que nao existe
+        JSONObject json = new JSONObject(response.body());
         JSONArray jsonArray = (JSONArray) json.get("results");
         return (JSONObject) jsonArray.get(0);
     }
