@@ -28,7 +28,7 @@ public class CLI {
                     System.out.println("Nome do manga: ");
                     nome = scanner.nextLine();
                     Manga manga = MangaParser.fromJSON(JikanAPI.getFirstSearchResult(Tipo.MANGA,nome));
-                    System.out.println();
+                    System.out.println(manga);
                     break;
                 case 0:
                     flag=false;

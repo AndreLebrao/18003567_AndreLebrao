@@ -10,6 +10,7 @@ import org.json.JSONArray;
 public class JikanAPI {
 
     public static JSONObject getFirstSearchResult(Tipo tipo, String nome) throws Exception {
+        nome = nome.replace(" ","%20");
         String inUrl = "https://api.jikan.moe/v3/search/"+tipo.toString()+"?q="+nome;
         HttpClient client = HttpClient.newBuilder().build();
         HttpRequest request = HttpRequest.newBuilder().GET()
