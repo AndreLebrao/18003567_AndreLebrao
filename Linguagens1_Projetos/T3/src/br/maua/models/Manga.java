@@ -1,4 +1,11 @@
 package br.maua.models;
+/**
+ * Classe do modelo de manga <br>
+ * Inclui somente construtor, getters e toString
+ * @author Andre Lebrao 18.00356-7
+ * @author Joao Guilherme Jatoba 18.01790-8
+ * @since 28/09/2020
+ */
 
 public class Manga {
     private String URL;
@@ -9,6 +16,12 @@ public class Manga {
     private String tipo;
     private Double nota;
 
+    // TODO ver uso dos getters pos implemetacao de DAO
+
+
+    /**
+     * @return String com representacao de todas variaveis da classe
+     */
     @Override
     public String toString() {
         return "Manga{" +
@@ -22,6 +35,18 @@ public class Manga {
                 '}';
     }
 
+    /**
+     * Construtor da classe Manga
+     *
+     * @param URL url do poster do manga
+     * @param nome nome do manga
+     * @param sinopse sinopse do manga
+     * @param quantCap quantidade de capitulos que o manga tem
+     * @param quantVol quantidade de volumes que o manga tem
+     * @param tipo se eh manga ou anime TODO ver o que eh a variavel tipo do manga (genero ou manga/anime)
+     * @param nota nota do manga no site
+     *
+     */
     public Manga(String URL, String nome, String sinopse, int quantCap, int quantVol, String tipo, Double nota) {
         this.URL = URL;
         this.nome = nome;

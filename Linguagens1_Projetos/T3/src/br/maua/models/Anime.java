@@ -1,6 +1,7 @@
 package br.maua.models;
 
 /**
+ * Classe do modelo de anime <br>
  * Inclui somente construtor, getters e toString
  * @author Andre Lebrao 18.00356-7
  * @author Joao Guilherme Jatoba 18.01790-8
@@ -13,6 +14,8 @@ public class Anime {
     private String sinopse;
     private int quantEp;
     private Double nota;
+
+    // TODO ver uso dos getters pos implemetacao de DAO
 
     /**
      * @return URL do poster do anime
@@ -63,6 +66,7 @@ public class Anime {
                 '}';
     }
     /**
+     * Construtor da classe Anime
      * @param URL url do poster do anime
      * @param nome nome do anime
      * @param sinopse sinopse do anime
