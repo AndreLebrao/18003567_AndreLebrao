@@ -7,6 +7,9 @@ import java.net.http.HttpResponse;
 import br.maua.enums.Tipo;
 import org.json.JSONObject;
 import org.json.JSONArray;
+
+
+
 public class JikanAPI {
 
     public static JSONObject getFirstSearchResult(Tipo tipo, String nome) throws Exception {
