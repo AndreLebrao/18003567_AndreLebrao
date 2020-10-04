@@ -19,7 +19,7 @@ public class AnimeDAO  implements DAO<Anime>,DAOFields{
 
     /**
      * Construtor da classe modelo de AnimeDAO<br>
-     *     Inicia a conexao com SQL
+     *     Inicia a conexao com a tabela anime em SQL
      */
     public AnimeDAO(){
         try {

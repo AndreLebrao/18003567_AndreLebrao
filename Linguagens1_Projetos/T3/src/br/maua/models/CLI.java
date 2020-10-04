@@ -1,31 +1,48 @@
 package br.maua.models;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
 import br.maua.dao.AnimeDAO;
 import br.maua.dao.MangaDAO;
-import br.maua.models.*;
 import br.maua.enums.Tipo;
 import br.maua.parsers.AnimeParser;
 import br.maua.parsers.MangaParser;
 
+/**
+ * Responsavel pela interface com o usuario
+ * @author Andre Lebrao 18.00356-7
+ * @author Joao Guilherme Jatoba 18.01790-8
+ * @since 28/09/2020
+ */
 public class CLI {
-    private static boolean flag=true;
 
-    private static void printAnimeList(List<Anime> animes){
+    private static boolean flag=true;
+    /**
+     *
+     * @param animes Lista de animes existentes no banco de dados
+     */
+    public static void printAnimeList(List<Anime> animes){
         for (Anime anime:animes) {
             System.out.println(anime);
             System.out.println();
         }
     }
-    private static void printMangaList(List<Manga> mangas){
+
+    /**
+     *
+     * @param mangas Lista de mangas existentes no banco de dados
+     */
+    public static void printMangaList(List<Manga> mangas){
         for(Manga manga : mangas){
             System.out.println(manga);
             System.out.println();
         }
     }
+
+    /**
+     * Classe que sera a implementacao da interface que o usuario vera
+     * @throws Exception
+     */
     public static void run() throws Exception {
         Scanner scanner = new Scanner(System.in);
         int opcao;

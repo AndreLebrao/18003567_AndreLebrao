@@ -12,7 +12,7 @@ import org.json.JSONObject;
 
 public class AnimeParser {
     /**
-     *
+     * Transforma um objeto json em um objeto Anime
      * @param json Objeto json que tem os dados de um anime
      * @return Objeto do tipo anime
      */

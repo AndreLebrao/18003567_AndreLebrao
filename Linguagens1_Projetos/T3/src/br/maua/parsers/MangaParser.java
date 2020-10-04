@@ -11,7 +11,7 @@ import org.json.JSONObject;
  */
 public class MangaParser {
     /**
-     *
+     * Transforma um objeto json em um objeto Manga
      * @param json Objeto json que tem os dados de um manga
      * @return Objeto do tipo manga
      */

@@ -18,7 +18,7 @@ public class MangaDAO implements DAO<Manga>,DAOFields{
     private String myDBConnectionString = "jdbc:sqlite:weeb.db";
     /**
      * Construtor da classe modelo de MangaDAO<br>
-     *     Inicia a conexao com SQL
+     *     Inicia a conexao com a tabela manga em SQL
      */
     public MangaDAO(){
         try {
