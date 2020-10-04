@@ -58,7 +58,16 @@ public class MangaDAO implements DAO<Manga>,DAOFields{
             throwables.printStackTrace();
         }
     }
-
+    @Override
+    public boolean isinDB(String novoNome) {
+        List<Manga> mangas = getAll();
+        for(Manga manga: mangas){
+            if(manga.getNome().equals(novoNome)){
+                return true;
+            }
+        }
+        return false;
+    }
     @Override
     public String getTableName() {
         return "manga";

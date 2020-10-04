@@ -7,14 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AnimeDAO  implements DAO<Anime>,DAOFields{
-    private static List<Anime> animes;
     private Connection connection;
     private String myDBConnectionString = "jdbc:sqlite:weeb.db";
 
     public AnimeDAO(){
         try {
             connection = DriverManager.getConnection(myDBConnectionString);
-            animes = getAll();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -53,11 +51,21 @@ public class AnimeDAO  implements DAO<Anime>,DAOFields{
             preparedStatement.setString(3,anime.getSinopse());
             preparedStatement.setInt(4,anime.getQuantEp());
             preparedStatement.setDouble(5,anime.getNota());
-            animes.add(anime);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
 
+    }
+
+    @Override
+    public boolean isinDB(String novoNome) {
+        List<Anime> animes = getAll();
+        for(Anime anime: animes){
+            if(anime.getNome().equals(novoNome)){
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

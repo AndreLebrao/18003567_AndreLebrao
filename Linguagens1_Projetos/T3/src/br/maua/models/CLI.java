@@ -3,6 +3,9 @@ package br.maua.models;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+import br.maua.dao.AnimeDAO;
+import br.maua.dao.MangaDAO;
 import br.maua.models.*;
 import br.maua.enums.Tipo;
 import br.maua.parsers.AnimeParser;
@@ -15,8 +18,8 @@ public class CLI {
         Scanner scanner = new Scanner(System.in);
         int opcao;
         String nome;
-        List<Anime> animes = new ArrayList<>();
-        List<Manga> mangas = new ArrayList<>();
+        AnimeDAO animeDAO = new AnimeDAO();
+        MangaDAO mangaDAO = new MangaDAO();
         while(flag){
             System.out.printf("1 - Anime\n2 - Manga\n3 - Mostrar banco de dados\n0 - sair\nEscolha a opção: ");
             opcao = scanner.nextInt();
@@ -27,9 +30,12 @@ public class CLI {
                 case 1:
                     System.out.println("Nome do anime: ");
                     nome = scanner.nextLine();
-
+                    if(animeDAO.isinDB(nome)){
+                        System.out.println("Esse anime já está no DB");
+                        break;
+                    }
                     Anime anime = AnimeParser.fromJSON(JikanAPI.getFirstSearchResult(Tipo.ANIME,nome));
-                    System.out.println(anime);
+                    animeDAO.create(anime);
                     break;
                 case 2:
                     System.out.println("Nome do manga: ");
@@ -43,10 +49,10 @@ public class CLI {
                     scanner.nextLine();
                     switch (opcaoBanco){
                         case 1:
-                            System.out.println("banco anime");
+                            System.out.println(animeDAO.getAll());
                             break;
                         case 2:
-                            System.out.println("banco manga");
+                            System.out.println(mangaDAO.getAll());
                             break;
                         default:
                             break;
