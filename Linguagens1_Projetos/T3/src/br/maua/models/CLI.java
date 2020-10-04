@@ -1,5 +1,7 @@
 package br.maua.models;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import br.maua.models.*;
 import br.maua.enums.Tipo;
@@ -13,6 +15,8 @@ public class CLI {
         Scanner scanner = new Scanner(System.in);
         int opcao;
         String nome;
+        List<Anime> animes = new ArrayList<>();
+        List<Manga> mangas = new ArrayList<>();
         while(flag){
             System.out.printf("1 - Anime\n2 - Manga\n3 - Mostrar banco de dados\n0 - sair\nEscolha a opção: ");
             opcao = scanner.nextInt();
@@ -23,6 +27,7 @@ public class CLI {
                 case 1:
                     System.out.println("Nome do anime: ");
                     nome = scanner.nextLine();
+
                     Anime anime = AnimeParser.fromJSON(JikanAPI.getFirstSearchResult(Tipo.ANIME,nome));
                     System.out.println(anime);
                     break;

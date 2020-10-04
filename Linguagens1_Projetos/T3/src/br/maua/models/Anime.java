@@ -77,6 +77,8 @@ public class Anime {
     public Anime(String URL, String nome, String sinopse, int quantEp, Double nota) {
         this.URL = URL;
         this.nome = nome;
+        sinopse = sinopse.replace("\"","\"\"");
+//        sinopse = sinopse.replace("\"","\'");
         this.sinopse = sinopse;
         this.quantEp = quantEp;
         this.nota = nota;

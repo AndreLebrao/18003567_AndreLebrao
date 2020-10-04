@@ -36,6 +36,38 @@ public class Manga {
     }
 
     /**
+     *
+     * @return
+     */
+    public String getURL() {
+        return URL;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getSinopse() {
+        return sinopse;
+    }
+
+    public int getQuantCap() {
+        return quantCap;
+    }
+
+    public int getQuantVol() {
+        return quantVol;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public Double getNota() {
+        return nota;
+    }
+
+    /**
      * Construtor da classe Manga
      *
      * @param URL url do poster do manga
@@ -43,7 +75,7 @@ public class Manga {
      * @param sinopse sinopse do manga
      * @param quantCap quantidade de capitulos que o manga tem
      * @param quantVol quantidade de volumes que o manga tem
-     * @param tipo se eh manga ou anime TODO ver o que eh a variavel tipo do manga (genero ou manga/anime)
+     * @param tipo se eh manga ou anime
      * @param nota nota do manga no site
      *
      */
