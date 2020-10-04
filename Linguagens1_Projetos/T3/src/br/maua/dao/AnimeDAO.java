@@ -17,8 +17,6 @@ public class AnimeDAO  implements DAO<Anime>,DAOFields{
             throwables.printStackTrace();
         }
     }
-    //TODO: decidir se a gnt vai usar aquela lista static pra comparar o anime a ser inserido com o banco ou se vamos
-    // so dar um getAll()
     @Override
     public List<Anime> getAll() {
         List<Anime> animes = new ArrayList<>();
@@ -51,6 +49,7 @@ public class AnimeDAO  implements DAO<Anime>,DAOFields{
             preparedStatement.setString(3,anime.getSinopse());
             preparedStatement.setInt(4,anime.getQuantEp());
             preparedStatement.setDouble(5,anime.getNota());
+            preparedStatement.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

@@ -9,7 +9,7 @@ import org.json.JSONObject;
 public class TestJSON {
     public static void main(String[] args) throws Exception {
         Tipo tipoTeste = Tipo.ANIME;
-        String nomeTeste = "Boku no Hero Academia";
+        String nomeTeste = "\\";
         JSONObject json = JikanAPI.getFirstSearchResult(tipoTeste,nomeTeste);
         System.out.println(json);
         Anime anime = AnimeParser.fromJSON(json);

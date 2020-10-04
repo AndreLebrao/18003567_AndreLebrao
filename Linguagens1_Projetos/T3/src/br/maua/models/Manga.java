@@ -16,23 +16,19 @@ public class Manga {
     private String tipo;
     private Double nota;
 
-    // TODO ver uso dos getters pos implemetacao de DAO
-
 
     /**
      * @return String com representacao de todas variaveis da classe
      */
     @Override
     public String toString() {
-        return "Manga{" +
-                "URL='" + URL + '\'' +
-                ", nome='" + nome + '\'' +
-                ", sinopse='" + sinopse + '\'' +
-                ", quantCap=" + quantCap +
-                ", quantVol=" + quantVol +
-                ", tipo='" + tipo + '\'' +
-                ", nota=" + nota +
-                '}';
+        return  "nome: " + nome + "\n" +
+                "URL: " + URL + "\n" +
+                "sinopse: " + sinopse + "\n" +
+                "quantCap: " + quantCap +"\n"+
+                "quantVol: " + quantVol +"\n"+
+                "tipo: " + tipo + "\n" +
+                "nota: " + nota;
     }
 
     /**

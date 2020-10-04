@@ -54,6 +54,7 @@ public class MangaDAO implements DAO<Manga>,DAOFields{
             preparedStatement.setInt(5,manga.getQuantVol());
             preparedStatement.setString(6,manga.getTipo());
             preparedStatement.setDouble(7,manga.getNota());
+            preparedStatement.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

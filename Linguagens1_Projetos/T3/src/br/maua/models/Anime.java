@@ -15,8 +15,6 @@ public class Anime {
     private int quantEp;
     private Double nota;
 
-    // TODO ver uso dos getters pos implemetacao de DAO
-
     /**
      * @return URL do poster do anime
      */
@@ -57,13 +55,11 @@ public class Anime {
      */
     @Override
     public String toString() {
-        return "Anime{" +
-                "URL='" + URL + '\'' +
-                ", nome='" + nome + '\'' +
-                ", sinopse='" + sinopse + '\'' +
-                ", quantEp='" + quantEp + '\'' +
-                ", nota='" + nota + '\'' +
-                '}';
+        return  "nome: " + nome + "\n" +
+                "URL: " + URL + "\n" +
+                "sinopse: " + sinopse + "\n" +
+                "quantEp: " + quantEp + "\n" +
+                "nota: " + nota;
     }
     /**
      * Construtor da classe Anime

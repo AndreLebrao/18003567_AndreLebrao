@@ -14,6 +14,18 @@ import br.maua.parsers.MangaParser;
 public class CLI {
     private static boolean flag=true;
 
+    private static void printAnimeList(List<Anime> animes){
+        for (Anime anime:animes) {
+            System.out.println(anime);
+            System.out.println();
+        }
+    }
+    private static void printMangaList(List<Manga> mangas){
+        for(Manga manga : mangas){
+            System.out.println(manga);
+            System.out.println();
+        }
+    }
     public static void run() throws Exception {
         Scanner scanner = new Scanner(System.in);
         int opcao;
@@ -25,23 +37,33 @@ public class CLI {
             opcao = scanner.nextInt();
             scanner.nextLine();
             switch (opcao){
-                //TODO: antes de pesquisar na API tem que pesquisar no banco de dados, se ja tiver ja fala que tem no
-                // banco
                 case 1:
                     System.out.println("Nome do anime: ");
                     nome = scanner.nextLine();
                     if(animeDAO.isinDB(nome)){
-                        System.out.println("Esse anime já está no DB");
+                        System.out.println("Esse anime já está no DB...");
                         break;
                     }
-                    Anime anime = AnimeParser.fromJSON(JikanAPI.getFirstSearchResult(Tipo.ANIME,nome));
-                    animeDAO.create(anime);
+                    try {
+                        Anime anime = AnimeParser.fromJSON(JikanAPI.getFirstSearchResult(Tipo.ANIME, nome));
+                        animeDAO.create(anime);
+                    }catch (Exception e){
+                        System.out.println("Erro ao adicionar o anime...");
+                    }
                     break;
                 case 2:
                     System.out.println("Nome do manga: ");
                     nome = scanner.nextLine();
-                    Manga manga = MangaParser.fromJSON(JikanAPI.getFirstSearchResult(Tipo.MANGA,nome));
-                    System.out.println(manga);
+                    if(mangaDAO.isinDB(nome)){
+                        System.out.println("Esse manga já está no DB...");
+                        break;
+                    }
+                    try {
+                        Manga manga = MangaParser.fromJSON(JikanAPI.getFirstSearchResult(Tipo.MANGA, nome));
+                        mangaDAO.create(manga);
+                    }catch (Exception e){
+                        System.out.println("Erro ao cadastrar o manga...");
+                    }
                     break;
                 case 3:
                     System.out.println("Qual banco de dados?\n1 - Anime\n2 - Manga\nEscolha a opção: ");
@@ -49,10 +71,10 @@ public class CLI {
                     scanner.nextLine();
                     switch (opcaoBanco){
                         case 1:
-                            System.out.println(animeDAO.getAll());
+                            printAnimeList(animeDAO.getAll());
                             break;
                         case 2:
-                            System.out.println(mangaDAO.getAll());
+                            printMangaList(mangaDAO.getAll());
                             break;
                         default:
                             break;
