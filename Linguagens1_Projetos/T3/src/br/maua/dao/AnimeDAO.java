@@ -6,10 +6,21 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Classe modelo de Anime<br>
+ *     Implementa interfaces DAO e DAOFields
+ * @author Andre Lebrao 18.00356-7
+ * @author Joao Guilherme Jatoba 18.01790-8
+ * @since 28/09/2020
+ */
 public class AnimeDAO  implements DAO<Anime>,DAOFields{
     private Connection connection;
     private String myDBConnectionString = "jdbc:sqlite:weeb.db";
 
+    /**
+     * Construtor da classe modelo de AnimeDAO<br>
+     *     Inicia a conexao com SQL
+     */
     public AnimeDAO(){
         try {
             connection = DriverManager.getConnection(myDBConnectionString);
@@ -17,6 +28,11 @@ public class AnimeDAO  implements DAO<Anime>,DAOFields{
             throwables.printStackTrace();
         }
     }
+
+    /**
+     * Classe de retorno de lista
+     * @return Lista de animes
+     */
     @Override
     public List<Anime> getAll() {
         List<Anime> animes = new ArrayList<>();
@@ -40,6 +56,10 @@ public class AnimeDAO  implements DAO<Anime>,DAOFields{
         return animes;
     }
 
+    /**
+     * Classe que ira adicionar um novo anime no banco de dados
+     * @param anime O anime para ser adicionado no banco de dados
+     */
     @Override
     public void create(Anime anime) {
         try {
@@ -56,6 +76,12 @@ public class AnimeDAO  implements DAO<Anime>,DAOFields{
 
     }
 
+
+    /**
+     * Metodo que ira verificar a existencia de um anime na tabela no banco de dados
+     * @param novoNome Nome do novo anime
+     * @return true se ja existir anime no banco, false se nao existir
+     */
     @Override
     public boolean isinDB(String novoNome) {
         List<Anime> animes = getAll();
@@ -67,16 +93,30 @@ public class AnimeDAO  implements DAO<Anime>,DAOFields{
         return false;
     }
 
+    /**
+     *
+     * @return Nome da tabela (anime)
+     */
     @Override
     public String getTableName() {
         return "anime";
     }
 
+    /**
+     *
+     * @param table Nome da tabela
+     * @return Frase usada em SQL para adicionar um novo elemento na tabela
+     */
     @Override
     public String getInsertString(String table) {
         return "INSERT INTO "+table +" (url,nome,sinopse,quantEp,nota) VALUES (?,?,?,?,?);";
     }
 
+    /**
+     *
+     * @param table Nome da tabela
+     * @return Frase usada em SQL para recuperar os dados da tabela
+     */
     @Override
     public String getSelectAllString(String table) {
         return "SELECT * FROM " + table;

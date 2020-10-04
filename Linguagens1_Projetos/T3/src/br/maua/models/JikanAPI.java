@@ -27,16 +27,4 @@ public class JikanAPI {
         return (JSONObject) jsonArray.get(0);
     }
 
-    public static void leituraJava11(String inUrl) throws Exception{
-        HttpClient client = HttpClient.newBuilder().build();
-        HttpRequest request = HttpRequest.newBuilder().GET()
-                .uri(URI.create(inUrl))
-                .build();
-        HttpResponse<String> response = client.send(request,
-                HttpResponse.BodyHandlers.ofString());
-        System.out.println("Status Code: "+response.statusCode());
-        System.out.println("Recebidos");
-        System.out.println(response.body());
-    }
-
 }
