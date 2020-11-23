@@ -20,20 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa8bac98-1819-402c-be56-187ca7b374a6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/chamada_http/teste_api.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/colecoes/colecoes.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/estruturas/decisao2.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/estruturas/funcoes.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/estruturas/repeticao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/estruturas/repeticao2.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/fundamentos/conversao_de_tipo.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/fundamentos/entrada_de_dados.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/fundamentos/entrada_de_dados2.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/oo/tudo_junto.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pratica18.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Pratica18.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/main.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,6 +161,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="312" y="0" key="#Project_Structure" timestamp="1603723100668">
@@ -188,22 +176,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="757" y="215" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603726036174" />
-    <state width="1865" height="268" key="GridCell.Tab.0.bottom" timestamp="1603726274907">
+    <state width="1865" height="268" key="GridCell.Tab.0.bottom" timestamp="1603731032784">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="268" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603726274907" />
-    <state width="1865" height="268" key="GridCell.Tab.0.center" timestamp="1603726274907">
+    <state width="1865" height="268" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603731032784" />
+    <state width="1865" height="268" key="GridCell.Tab.0.center" timestamp="1603731032783">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="268" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603726274907" />
-    <state width="1865" height="268" key="GridCell.Tab.0.left" timestamp="1603726274907">
+    <state width="1865" height="268" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603731032783" />
+    <state width="1865" height="268" key="GridCell.Tab.0.left" timestamp="1603731032783">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="268" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603726274907" />
-    <state width="1865" height="268" key="GridCell.Tab.0.right" timestamp="1603726274907">
+    <state width="1865" height="268" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603731032783" />
+    <state width="1865" height="268" key="GridCell.Tab.0.right" timestamp="1603731032784">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="268" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603726274907" />
+    <state width="1865" height="268" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603731032784" />
     <state x="445" y="0" key="SettingsEditor" timestamp="1603726044197">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
