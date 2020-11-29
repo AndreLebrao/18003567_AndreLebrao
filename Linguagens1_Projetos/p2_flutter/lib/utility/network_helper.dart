@@ -17,4 +17,15 @@ class NetworkHelper{
       return null;
     }
   }
+  Future postData(String image) async{
+    http.Response response = await http.get(url);
+    if(response.statusCode == 200) {
+      //Resultado da requisição
+      return jsonDecode(response.body);
+    }
+    else{
+      print(response.statusCode);
+      return null;
+    }
+  }
 }
