@@ -10,7 +10,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  var _listaAnimes = ["Shimoneta","Love is War","Boku no Hero", "Noragami"];
+  var _listaHerois = [];
   final _controlador = TextEditingController();
 
   @override
@@ -20,29 +20,45 @@ class _HomeScreenState extends State<HomeScreen> {
         appBar: AppBar(title: Text("BokuNoWiki"),centerTitle: true,),
         body: Column(
           children: [
-          customTextField(_controlador, "", "URL:", Icons.search),
+            customTextField(_controlador, "", "URL:", Icons.search),
             FlatButton(onPressed: ()async{
-              var _req = NetworkHelper(url:"https://myheroacademiaapi.com/api/character?alias=deku");
-              var _resp = RespostaAPI.fromJson(await _req.getData());
-              print(_resp.result.first.name);
+              await procurarHeroi();
+
             }, child: Text("Buscar")),
             Expanded(
               child: ListView.builder(
 
                   itemBuilder: (context, index){
                     return ListTile(
-                      title: Text(_listaAnimes[index]));
+                      title: Text("asd"));
                   },
-                itemCount: _listaAnimes.length,
+                itemCount: _listaHerois.length,
               ),
             )
-
-
-
+            
           ],
         ),
       ),
     );
+  }
+
+  Future procurarHeroi() async {
+    var _req = NetworkHelper(url:"https://myheroacademiaapi.com/api/character?alias="+_controlador.text);
+    var _resp = await _req.getData();
+    if(_resp!=null){
+      var _json = RespostaAPI.fromJson(_resp);
+      setState(() {
+        var novoHeroi = Heroi(
+            _json.result.first.images.first,
+            _json.result.first.name,
+            _json.result.first.gender,
+            _json.result.first.alias,
+            _json.result.first.quirk,
+            _json.result.first.affiliation,
+            _json.result.first.birthday);
+        if(!_listaHerois.contains(novoHeroi)){_listaHerois.add(novoHeroi);}
+      });
+    }
   }
 
   Padding customTextField(TextEditingController controlador, String hint, String label, IconData icone) {
