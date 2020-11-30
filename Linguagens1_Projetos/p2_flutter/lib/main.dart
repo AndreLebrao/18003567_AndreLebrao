@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:p2_flutter/screens/HomeScreen.dart';
+import 'package:p2_flutter/screens/TelaInicial.dart';
 
 void main() {
   runApp(MyApp());

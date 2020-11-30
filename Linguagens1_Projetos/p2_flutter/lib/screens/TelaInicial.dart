@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:p2_flutter/models/Heroi.dart';
 import 'package:p2_flutter/models/RespostaAPI.dart';
+import 'package:p2_flutter/screens/TelaPersonagem.dart';
 import 'package:p2_flutter/utility/network_helper.dart';
 
 
@@ -24,7 +25,6 @@ class _HomeScreenState extends State<HomeScreen> {
             customTextField(_controlador, "All Might, Shigaraki Tomura", "Busca de Personagens", Icons.search),
             FlatButton(onPressed: ()async{
               await procurarHeroi();
-
             }, child: Text("Buscar")),
             Expanded(
               child: ListView.builder(
@@ -33,8 +33,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     return ListTile(
                       title: Text(_listaHerois[index].apelido),
                       subtitle: Text(_listaHerois[index].individualidade),
-                        leading: Image.network(_listaHerois[index].imagemURL)
-
+                        leading: Image.network(_listaHerois[index].imagemURL),
+                      onTap:() {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>
+                              TelaPersonagem()),
+                        );
+                      }
                     );
 
                   },
