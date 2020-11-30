@@ -7,7 +7,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final controlador = TextEditingController();
+  var _listaAnimes = ["Shimoneta","Love is War","Boku no Hero", "Noragami"];
+  final _controlador = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -16,16 +17,26 @@ class _HomeScreenState extends State<HomeScreen> {
         appBar: AppBar(title: Text("AniFinder"),centerTitle: true,),
         body: Column(
           children: [
-          myTextField(controlador, "", "URL:", Icons.search),
+          customTextField(_controlador, "", "URL:", Icons.search),
             FlatButton(onPressed: (){
-            }, child: Text("Buscar"))
+            }, child: Text("Buscar")),
+            Expanded(
+              child: ListView.builder(
+                  itemBuilder: (context, index){
+                    return ListTile(
+                      title: Text(_listaAnimes[index]));
+                  },
+                itemCount: _listaAnimes.length,
+              ),
+            )
+
           ],
         ),
       ),
     );
   }
 
-  Padding myTextField(TextEditingController controlador, String hint, String label, IconData icone) {
+  Padding customTextField(TextEditingController controlador, String hint, String label, IconData icone) {
     return Padding(
       padding: const EdgeInsets.all(4.0),
       child: TextField(controller: controlador,decoration: InputDecoration(
