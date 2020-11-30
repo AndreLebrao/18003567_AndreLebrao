@@ -75,7 +75,7 @@ class Result {
   String _birthday;
   String _bloodtype;
   String _description;
-  Null _fightstyle;
+  String _fightstyle;
   String _gender;
   String _eye;
   String _hair;
@@ -87,7 +87,7 @@ class Result {
   String _status;
   String _teams;
   List<String> _images;
-  Null _epithet;
+  String _epithet;
   List<Ages> _ages;
   List<Family> _family;
 

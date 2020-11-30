@@ -20,7 +20,8 @@ class _HomeScreenState extends State<HomeScreen> {
         appBar: AppBar(title: Text("BokuNoWiki"),centerTitle: true,),
         body: Column(
           children: [
-            customTextField(_controlador, "", "URL:", Icons.search),
+            Expanded(child: Image.asset("lib/assets/logo.png")),
+            customTextField(_controlador, "All Might, Shigaraki Tomura", "Busca de Personagens", Icons.search),
             FlatButton(onPressed: ()async{
               await procurarHeroi();
 
@@ -30,12 +31,16 @@ class _HomeScreenState extends State<HomeScreen> {
 
                   itemBuilder: (context, index){
                     return ListTile(
-                      title: Text("asd"));
+                      title: Text(_listaHerois[index].apelido),
+                      subtitle: Text(_listaHerois[index].individualidade),
+                        leading: Image.network(_listaHerois[index].imagemURL)
+
+                    );
+
                   },
                 itemCount: _listaHerois.length,
               ),
             )
-            
           ],
         ),
       ),
@@ -44,9 +49,15 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future procurarHeroi() async {
     var _req = NetworkHelper(url:"https://myheroacademiaapi.com/api/character?alias="+_controlador.text);
-    var _resp = await _req.getData();
-    if(_resp!=null){
-      var _json = RespostaAPI.fromJson(_resp);
+    var _json = RespostaAPI.fromJson(await _req.getData());
+    print("");
+    print(_json.toString());
+    print("");
+    if(_json.result.isEmpty){
+      var _req = NetworkHelper(url:"https://myheroacademiaapi.com/api/character?name="+_controlador.text);
+      _json = RespostaAPI.fromJson(await _req.getData());
+    }
+    if(_json!=null){
       setState(() {
         var novoHeroi = Heroi(
             _json.result.first.images.first,
@@ -56,6 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
             _json.result.first.quirk,
             _json.result.first.affiliation,
             _json.result.first.birthday);
+
         if(!_listaHerois.contains(novoHeroi)){_listaHerois.add(novoHeroi);}
       });
     }
