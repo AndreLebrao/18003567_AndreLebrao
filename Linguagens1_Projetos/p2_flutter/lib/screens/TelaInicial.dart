@@ -35,10 +35,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       subtitle: Text(_listaHerois[index].individualidade),
                         leading: Image.network(_listaHerois[index].imagemURL),
                       onTap:() {
+                        //tambem encontrei isso da documentação do flutter https://flutter.dev/docs/cookbook/navigation/passing-data
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) =>
-                              TelaPersonagem()),
+                              TelaPersonagem(heroiAtual: _listaHerois[index],)),
                         );
                       }
                     );
