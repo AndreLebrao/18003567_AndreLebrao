@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:p2_flutter/models/Heroi.dart';
+import 'package:p2_flutter/models/RespostaAPI.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -29,6 +31,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 itemCount: _listaAnimes.length,
               ),
             )
+
+
 
           ],
         ),

@@ -88,8 +88,8 @@ class Result {
   String _teams;
   List<String> _images;
   String _epithet;
-  Null _ages;
-  Null _family;
+  String _ages;
+  String _family;
 
   Result(
       {String id,
@@ -178,10 +178,10 @@ class Result {
   set images(List<String> images) => _images = images;
   String get epithet => _epithet;
   set epithet(String epithet) => _epithet = epithet;
-  Null get ages => _ages;
-  set ages(Null ages) => _ages = ages;
-  Null get family => _family;
-  set family(Null family) => _family = family;
+  String get ages => _ages;
+  set ages(String ages) => _ages = ages;
+  String get family => _family;
+  set family(String family) => _family = family;
 
   Result.fromJson(Map<String, dynamic> json) {
     _id = json['id'];
