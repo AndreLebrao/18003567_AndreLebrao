@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:p2_flutter/models/Heroi.dart';
 import 'package:p2_flutter/models/RespostaAPI.dart';
+import 'package:p2_flutter/utility/network_helper.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -16,14 +17,18 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(title: Text("AniFinder"),centerTitle: true,),
+        appBar: AppBar(title: Text("BokuNoWiki"),centerTitle: true,),
         body: Column(
           children: [
           customTextField(_controlador, "", "URL:", Icons.search),
-            FlatButton(onPressed: (){
+            FlatButton(onPressed: ()async{
+              var _req = NetworkHelper(url:"https://myheroacademiaapi.com/api/character?alias=deku");
+              var _resp = RespostaAPI.fromJson(await _req.getData());
+              print(_resp.result.first.name);
             }, child: Text("Buscar")),
             Expanded(
               child: ListView.builder(
+
                   itemBuilder: (context, index){
                     return ListTile(
                       title: Text(_listaAnimes[index]));

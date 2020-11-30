@@ -87,9 +87,9 @@ class Result {
   String _status;
   String _teams;
   List<String> _images;
-  String _epithet;
-  String _ages;
-  String _family;
+  Null _epithet;
+  List<Ages> _ages;
+  List<Family> _family;
 
   Result(
       {String id,
@@ -99,7 +99,7 @@ class Result {
         String birthday,
         String bloodtype,
         String description,
-        Null fightstyle,
+        String fightstyle,
         String gender,
         String eye,
         String hair,
@@ -112,8 +112,8 @@ class Result {
         String teams,
         List<String> images,
         String epithet,
-        Null ages,
-        Null family}) {
+        List<Ages> ages,
+        List<Family> family}) {
     this._id = id;
     this._name = name;
     this._alias = alias;
@@ -152,8 +152,8 @@ class Result {
   set bloodtype(String bloodtype) => _bloodtype = bloodtype;
   String get description => _description;
   set description(String description) => _description = description;
-  Null get fightstyle => _fightstyle;
-  set fightstyle(Null fightstyle) => _fightstyle = fightstyle;
+  String get fightstyle => _fightstyle;
+  set fightstyle(String fightstyle) => _fightstyle = fightstyle;
   String get gender => _gender;
   set gender(String gender) => _gender = gender;
   String get eye => _eye;
@@ -178,10 +178,10 @@ class Result {
   set images(List<String> images) => _images = images;
   String get epithet => _epithet;
   set epithet(String epithet) => _epithet = epithet;
-  String get ages => _ages;
-  set ages(String ages) => _ages = ages;
-  String get family => _family;
-  set family(String family) => _family = family;
+  List<Ages> get ages => _ages;
+  set ages(List<Ages> ages) => _ages = ages;
+  List<Family> get family => _family;
+  set family(List<Family> family) => _family = family;
 
   Result.fromJson(Map<String, dynamic> json) {
     _id = json['id'];
@@ -204,8 +204,18 @@ class Result {
     _teams = json['teams'];
     _images = json['images'].cast<String>();
     _epithet = json['epithet'];
-    _ages = json['ages'];
-    _family = json['family'];
+    if (json['ages'] != null) {
+      _ages = new List<Ages>();
+      json['ages'].forEach((v) {
+        _ages.add(new Ages.fromJson(v));
+      });
+    }
+    if (json['family'] != null) {
+      _family = new List<Family>();
+      json['family'].forEach((v) {
+        _family.add(new Family.fromJson(v));
+      });
+    }
   }
 
   Map<String, dynamic> toJson() {
@@ -230,8 +240,66 @@ class Result {
     data['teams'] = this._teams;
     data['images'] = this._images;
     data['epithet'] = this._epithet;
-    data['ages'] = this._ages;
-    data['family'] = this._family;
+    if (this._ages != null) {
+      data['ages'] = this._ages.map((v) => v.toJson()).toList();
+    }
+    if (this._family != null) {
+      data['family'] = this._family.map((v) => v.toJson()).toList();
+    }
+    return data;
+  }
+}
+
+class Ages {
+  String _age;
+  String _when;
+
+  Ages({String age, String when}) {
+    this._age = age;
+    this._when = when;
+  }
+
+  String get age => _age;
+  set age(String age) => _age = age;
+  String get when => _when;
+  set when(String when) => _when = when;
+
+  Ages.fromJson(Map<String, dynamic> json) {
+    _age = json['age'];
+    _when = json['when'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['age'] = this._age;
+    data['when'] = this._when;
+    return data;
+  }
+}
+
+class Family {
+  String _id;
+  String _name;
+
+  Family({String id, String name}) {
+    this._id = id;
+    this._name = name;
+  }
+
+  String get id => _id;
+  set id(String id) => _id = id;
+  String get name => _name;
+  set name(String name) => _name = name;
+
+  Family.fromJson(Map<String, dynamic> json) {
+    _id = json['id'];
+    _name = json['name'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['id'] = this._id;
+    data['name'] = this._name;
     return data;
   }
 }
