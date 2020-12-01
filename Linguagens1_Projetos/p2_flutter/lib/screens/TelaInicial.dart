@@ -56,17 +56,17 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future procurarHeroi() async {
-    if(_controlador.text==null){
+    if(_controlador.text.length>0){
     var _req = NetworkHelper(url:"https://myheroacademiaapi.com/api/character?alias="+_controlador.text);
     var _json = RespostaAPI.fromJson(await _req.getData());
     print("");
     print(_json.toString());
-    print(_json.result.isEmpty);
+    print(_json.result.toString());
     if(_json.result.isEmpty){
       var _req = NetworkHelper(url:"https://myheroacademiaapi.com/api/character?name="+_controlador.text);
       _json = RespostaAPI.fromJson(await _req.getData());
-    }
-    if(_json!=null){
+    }print(_json.result.toString());
+    if(_json.result.isNotEmpty){
       setState(() {
         var novoHeroi = Heroi(
             _json.result.first.images.first,
@@ -79,6 +79,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
         if(!_listaHerois.contains(novoHeroi)){_listaHerois.add(novoHeroi);}
       });
+    }else{
+      erroNotFound(context);
     }
     }else{
       erroNotFound(context);
