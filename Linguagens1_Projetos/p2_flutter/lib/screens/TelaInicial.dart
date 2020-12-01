@@ -22,10 +22,10 @@ class _HomeScreenState extends State<HomeScreen> {
         body: Column(
           children: [
             Expanded(child: Image.asset("lib/assets/logo.png")),
-            customTextField(_controlador, "All Might, Shigaraki Tomura", "Busca de Personagens", Icons.search),
+            customTextField(_controlador, "All Might, Shigaraki Tomura", "Character Search", Icons.search),
             FlatButton(onPressed: ()async{
               await procurarHeroi();
-            }, child: Text("Buscar")),
+            }, child: Text("Search")),
             Expanded(
               child: ListView.builder(
 
