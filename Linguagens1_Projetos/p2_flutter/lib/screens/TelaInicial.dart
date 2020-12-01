@@ -24,6 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Expanded(child: Image.asset("lib/assets/logo.png")),
             customTextField(_controlador, "All Might, Shigaraki Tomura", "Character Search", Icons.search),
             FlatButton(onPressed: ()async{
+              // erroNotFound(context);
               await procurarHeroi();
             }, child: Text("Search")),
             Expanded(
@@ -55,11 +56,12 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future procurarHeroi() async {
+    if(_controlador.text==null){
     var _req = NetworkHelper(url:"https://myheroacademiaapi.com/api/character?alias="+_controlador.text);
     var _json = RespostaAPI.fromJson(await _req.getData());
     print("");
     print(_json.toString());
-    print("");
+    print(_json.result.isEmpty);
     if(_json.result.isEmpty){
       var _req = NetworkHelper(url:"https://myheroacademiaapi.com/api/character?name="+_controlador.text);
       _json = RespostaAPI.fromJson(await _req.getData());
@@ -78,6 +80,9 @@ class _HomeScreenState extends State<HomeScreen> {
         if(!_listaHerois.contains(novoHeroi)){_listaHerois.add(novoHeroi);}
       });
     }
+    }else{
+      erroNotFound(context);
+    }
   }
 
   Padding customTextField(TextEditingController controlador, String hint, String label, IconData icone) {
@@ -88,6 +93,29 @@ class _HomeScreenState extends State<HomeScreen> {
           labelText: label,
           icon: Icon(icone)
       ),),
+    );
+  }
+
+  erroNotFound(BuildContext context) {
+    Widget okButton = FlatButton(
+      child: Text("OK"),
+      onPressed: () {
+        Navigator.of(context).pop();
+      },
+    );
+    AlertDialog alerta = AlertDialog(
+      title: Text("Search Error"),
+      content: Text("Character not found..."),
+      actions: [
+        okButton,
+      ],
+    );
+    // exibe o dialog
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alerta;
+      },
     );
   }
 }
