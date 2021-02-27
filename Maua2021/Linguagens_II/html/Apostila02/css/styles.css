@@ -24,3 +24,21 @@ p{
 strong{
     color: blueviolet;
 }
+
+#principal p.promocao{
+    padding: 12px;
+    border-bottom: #CCC;
+}
+
+body #principal article section p.coordenadores{
+    text-align: center;
+}
+
+article > p{
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+main > article section > p.coordenadores{
+
+}
