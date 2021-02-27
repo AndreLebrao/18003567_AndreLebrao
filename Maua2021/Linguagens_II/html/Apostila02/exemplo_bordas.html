@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Bordas</title>
+    <style>
+        a{
+            /* border-width: thin;
+            border-color: red;
+            border-style: solid; */
+            border: thin red dashed;
+        }
+        .farmacia{
+            border-bottom: 5px solid #CCC;
+        }
+        .engenharia{
+            /* border-left: 2px solid green;
+            border-radius: 5px; */
+            border: 5px solid green;
+            border-radius: 4px;
+            background-color: beige;
+        }
+        .primeiro,.segundo{
+            width: 200px;
+            display: inline-block;
+            border: 2px solid black;
+            background-color: #CCC;
+        }
+        .primeiro{
+            padding: 20px;
+        }
+        .segundo{
+            padding: 10px 50px;
+        }
+        article{
+            border: 4px solid blue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <article>
+            <p class="primeiro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, mollitia. Velit hic sit expedita iusto, molestias officiis quos reprehenderit doloremque.</p>
+            <p class="segundo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptas voluptate sunt deserunt maiores necessitatibus atque quos officia, corporis aperiam.</p>
+        </article>
+        <div id="cursos">
+            <p class="engenharia">Engenharia</p>
+            <p class="farmacia">Farmácia</p>
+            <a href="">Mais Informações</a>
+        </div>
+    </main>
+</body>
+</html>
