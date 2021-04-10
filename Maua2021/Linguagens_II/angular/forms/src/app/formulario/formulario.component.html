@@ -1,0 +1,29 @@
+<div class="container border-top border-bottom my-3 p-5">
+  <form #pessoaForm="ngForm" (ngSubmit)="salvar(pessoaForm)">
+    <div class="row">
+      <div class="form-group col-12">
+        <label for="nomeInput">Nome</label>
+        <input name = 'nome' type="text" placeholder="Nome" class="form-control" ngModel/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-4"><label for="foneInput">Fone</label></div>
+      <input name="fone" type="text" placeholder="Fone" class="form-control" ngModel/>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-4"><label for="emailInput">E-mail</label></div>
+      <input name="email" type="text" placeholder="Email" class="form-control" ngModel/>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-4"><label for="profissaoInput">Profissão</label>
+        <select name="profissao" id="profissaoInput" class="form-control" ngModel>
+            <option value="">Selecione</option>
+            <option *ngFor="let p of profissoes">{{p}}</option>
+        </select>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-12"><button type="submit" class="btn-primary btn-block">Enviar</button></div>
+    </div>
+  </form>
+</div>
