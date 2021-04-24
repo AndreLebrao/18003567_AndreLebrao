@@ -1,12 +1,19 @@
 <mat-card>
-  <mat-form-field>
-    <input matInput type="text" placeholder="Nome" [(ngModel)]="nome" />
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput type="text" placeholder="Fone" [(ngModel)]="fone" />
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput type="text" placeholder="Email" [(ngModel)]="email" />
-  </mat-form-field>
-  <button color="primary" mat-raised-button (click)="(onAdicionarCliente)">inserir cliente</button>
+  <form #clienteForm="ngForm" (submit)="onAdicionarCliente(clienteForm)">
+    <mat-form-field>
+      <input matInput type="text" placeholder="Nome" name="nome" ngModel required minlength="4"/>
+      <mat-error>Digite um nome válido</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Fone" name="fone" ngModel required/>
+      <mat-error>Digite um fone válido</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Email" name="email" ngModel required email/>
+      <mat-error>Digite um email válido</mat-error>
+    </mat-form-field>
+    <button color="primary" mat-raised-button (click)="(onAdicionarCliente)">
+      inserir cliente
+    </button>
+  </form>
 </mat-card>

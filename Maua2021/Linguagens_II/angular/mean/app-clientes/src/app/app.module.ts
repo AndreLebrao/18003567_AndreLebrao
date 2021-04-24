@@ -12,6 +12,7 @@ import { ClienteInserirComponent } from './clientes/cliente-inserir/cliente-inse
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { ClienteListaComponent } from './clientes/cliente-lista/cliente-lista.component';
+import { ClienteService } from './clientes/cliente.service';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { ClienteListaComponent } from './clientes/cliente-lista/cliente-lista.co
     MatToolbarModule,
     MatExpansionModule
   ],
-  providers: [],
+  providers: [ClienteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
